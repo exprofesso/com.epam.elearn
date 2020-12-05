@@ -1,0 +1,9 @@
+# Project exclude paths
+/out/
+.idea/.gitignore
+.idea/google-java-format.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/sonarlint/
+com.epam.elearn.iml
+!/.idea/vcs.xml
