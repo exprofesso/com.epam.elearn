@@ -22,7 +22,7 @@ public class Ten {
             for (int j = 0; j < array[i].length; j++) {
 
                 array[i][j] = -5 + random.nextInt(11);
-                System.out.printf("%10d", array[i][j]);
+                System.out.printf(array[i][j] + "  ");
 
             }
             System.out.println();

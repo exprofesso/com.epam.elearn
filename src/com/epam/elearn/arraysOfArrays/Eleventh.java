@@ -20,7 +20,7 @@ public class Eleventh {
             for (int j = 0; j < array[i].length; j++) {
 
                 array[i][j] = random.nextInt(16);
-                System.out.printf("%10d", array[i][j]);
+                System.out.print(array[i][j] + "  ");
 
             }
             System.out.println();
@@ -36,7 +36,6 @@ public class Eleventh {
                 System.out.println("Номер строки, в которой число 5 встречается три и более раз: " + i);
             }
         }
-
 
     }
 }
