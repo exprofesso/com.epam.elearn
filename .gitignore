@@ -6,4 +6,6 @@
 .idea/modules.xml
 .idea/sonarlint/
 com.epam.elearn.iml
-!/.idea/vcs.xml
+.idea/vcs.xml
+.idea/aws.xml
+
