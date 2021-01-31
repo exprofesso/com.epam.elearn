@@ -18,14 +18,14 @@ public class Seventeenth {
 
     public static void main(String[] args) {
 
-    Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Укажите число");
         n = scanner.nextInt();
         scanner.close();
 
         int count = 0;
         newN = n;
-        while (newN > 0){
+        while (newN > 0) {
             sum();
             difference();
             System.out.println(subtraction);
@@ -46,6 +46,7 @@ public class Seventeenth {
         }
         return totalSum;
     }
+
     private static int difference() {
         subtraction = newN - totalSum;
         newN = subtraction;

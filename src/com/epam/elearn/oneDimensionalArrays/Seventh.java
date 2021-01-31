@@ -9,7 +9,7 @@ public class Seventh {
         maxElement();
     }
 
-    public static void maxElement () {
+    public static void maxElement() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Укажите размер массива");
         int z = scanner.nextInt();

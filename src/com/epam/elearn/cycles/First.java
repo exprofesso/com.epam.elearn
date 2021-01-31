@@ -12,16 +12,16 @@ public class First {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Укаэите положительное число ");
         int num = scanner.nextInt();
-        while (num <= 0){
+        while (num <= 0) {
             System.out.println("Укаэите только положительное число ");
             num = scanner.nextInt();
         }
-            System.out.println("Суммой всех чисел от 1 до " + num +" " + "будет = " + sumOfNumbers(num));
+        System.out.println("Суммой всех чисел от 1 до " + num + " " + "будет = " + sumOfNumbers(num));
     }
 
-    public static int sumOfNumbers (int num){
+    public static int sumOfNumbers(int num) {
         int count = 0;
-        for (int i = 1; i <=num; i++){
+        for (int i = 1; i <= num; i++) {
             count = count + i;
         }
         return count;

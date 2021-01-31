@@ -91,7 +91,8 @@ public class Sixteenth {
         }
         return magic;
     }
-            // третий вариант
+
+    // третий вариант
     private static int[][] evenOddMagicSquare(int n) {
         int[][] magic = new int[n][n];
         int[][] magicNNN = fourMagicSquare(n - 2);

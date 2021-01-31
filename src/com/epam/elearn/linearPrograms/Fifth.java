@@ -14,7 +14,7 @@ public class Fifth {
 
     public static String hms(int time) {
 
-        int hours = time / (60*60);
+        int hours = time / (60 * 60);
         int minutes = (time - hours * 60 * 60) / 60;
         int seconds = time - (hours * 60 * 60) - (minutes * 60);
 

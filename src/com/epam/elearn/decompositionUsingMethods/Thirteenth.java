@@ -9,7 +9,7 @@ package com.epam.elearn.decompositionUsingMethods;
 public class Thirteenth {
 
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
 
         int mass[] = {4, 11, 13, 8, 13, 45, 47, 71, 75};
         simple(mass);

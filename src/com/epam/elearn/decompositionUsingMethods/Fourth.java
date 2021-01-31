@@ -22,16 +22,16 @@ public class Fourth {
         System.out.println("Укажите колличество стобцов");
         int b = scanner.nextInt();
 
-        int array[][] = new int [a][b];
+        int array[][] = new int[a][b];
 
-        for (int i = 0; i < array.length; i++){
-            for (int j = 0; j < array[i].length; j++){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
                 array[i][j] = random.nextInt(50);
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
-            int[] result = findMaxDistance(array);
+        int[] result = findMaxDistance(array);
 
         System.out.printf("Максимальное расстояние между точками %d и %d, равно %.1f %n",
                 result[0], result[1], maxDistance);

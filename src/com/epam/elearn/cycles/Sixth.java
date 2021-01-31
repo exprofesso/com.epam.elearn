@@ -6,13 +6,14 @@ package com.epam.elearn.cycles;
 public class Sixth {
 
     public static void main(String[] args) {
-        division(200,299);
+        division(200, 299);
     }
-    public static void division (int m, int n){
-        while (m < n){
+
+    public static void division(int m, int n) {
+        while (m < n) {
             System.out.print(m + ": ");
-            for(int i = 2; i < m -1; i++) {
-                if(m % i == 0) {
+            for (int i = 2; i < m - 1; i++) {
+                if (m % i == 0) {
                     System.out.print(i + " ");
                 }
             }

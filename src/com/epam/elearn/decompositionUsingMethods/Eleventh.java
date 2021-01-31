@@ -16,17 +16,17 @@ public class Eleventh {
         equality(a, b);
     }
 
-    public static void equality (String a, String b){
+    public static void equality(String a, String b) {
 
         int first = a.length();
         int second = b.length();
 
-        if(first > second){
+        if (first > second) {
             System.out.println("В первом числе больше цифр");
-        } else  if (first < second){
+        } else if (first < second) {
             System.out.println("Во втором числе больше цифр");
         } else
-        System.out.println("Оба эти числа имею одинаковое число цифр");
+            System.out.println("Оба эти числа имею одинаковое число цифр");
 
     }
 }

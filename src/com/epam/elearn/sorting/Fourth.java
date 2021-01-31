@@ -9,10 +9,10 @@ public class Fourth {
 
         // сортировка
 
-        for (int i = 1; i < arr.length; i++){
+        for (int i = 1; i < arr.length; i++) {
             int buffer = arr[i];
             int j = i - 1;
-            while ( j >= 0 && arr[j] > buffer){
+            while (j >= 0 && arr[j] > buffer) {
 
                 arr[j + 1] = arr[j];
                 j--;
@@ -25,9 +25,9 @@ public class Fourth {
     }
 
     // метод вывода массива
-    public static void printArray(int[] arr){
+    public static void printArray(int[] arr) {
         System.out.print("array: ");
-        for (int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
     }

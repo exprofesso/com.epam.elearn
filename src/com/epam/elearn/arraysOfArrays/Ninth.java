@@ -17,17 +17,17 @@ public class Ninth {
         System.out.println("Укажите размер матрицы");
         int n = scanner.nextInt();
 
-        int [][] array =  new int[n][n];
+        int[][] array = new int[n][n];
         int answer = 0;
         int count = 0;
 
-        for (int i = 0; i < array.length; i++){
-            for (int j = 0; j < array[i].length; j++){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
                 array[i][j] = random.nextInt(10);
-                count +=array[i][j];
+                count += array[i][j];
                 System.out.print(array[i][j]);
             }
-            if(count > answer){
+            if (count > answer) {
                 answer = count;
 
             }

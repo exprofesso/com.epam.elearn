@@ -6,25 +6,26 @@ package com.epam.elearn.decompositionUsingMethods;
  */
 
 import java.util.Scanner;
+
 public class Ten {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Укажите число для заполнения");
         String num = scanner.nextLine();
-            array(num);
+        array(num);
     }
 
 
-    public static void array (String n){
+    public static void array(String n) {
 
         int length = String.valueOf(n).length();
         long num = Long.parseLong(n);
-        long array[] = new long [length];
-        for(int i = 0; i < array.length;  i++){
+        long array[] = new long[length];
+        for (int i = 0; i < array.length; i++) {
             array[i] = num % 10;
             num /= 10;
-          System.out.print(array[i] + " ");
+            System.out.print(array[i] + " ");
         }
     }
 }

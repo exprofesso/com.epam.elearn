@@ -5,7 +5,7 @@ package com.epam.elearn.decompositionUsingMethods;
 import java.util.Scanner;
 
 public class Second {
-    public static void main(String[] args)   {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Укажите первое натуральное число");
         int n1 = scanner.nextInt();
@@ -16,7 +16,7 @@ public class Second {
         System.out.println("Укажите четвертое натуральное число");
         int n4 = scanner.nextInt();
 
-        System.out.println("НОД = "+nod(nod(n1, n2), nod(n3, n4)));
+        System.out.println("НОД = " + nod(nod(n1, n2), nod(n3, n4)));
 
     }
 

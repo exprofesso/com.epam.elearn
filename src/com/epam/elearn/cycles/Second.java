@@ -10,12 +10,12 @@ public class Second {
     }
 
 
-    public static void inputInt (){
-     int a;
-     int b;
-     int h;
+    public static void inputInt() {
+        int a;
+        int b;
+        int h;
 
-     Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Укажите пункт A");
         a = scanner.nextInt();
         System.out.println("Укажите пункт B");
@@ -23,16 +23,16 @@ public class Second {
         System.out.println("Укажите пункт H");
         h = scanner.nextInt();
 
-        System.out.println("Значения функции на отрезке " + function(a,b,h));
+        System.out.println("Значения функции на отрезке " + function(a, b, h));
 
     }
 
-    public static long function (int a, int b, int h){
+    public static long function(int a, int b, int h) {
         long tmpMinus = 0;
         long tmpPlus = 0;
 
-        for(long i = a; i <= b; i += h){
-            if(i <= 2){
+        for (long i = a; i <= b; i += h) {
+            if (i <= 2) {
                 tmpMinus -= i;
             } else {
                 tmpPlus += i;

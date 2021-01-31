@@ -7,10 +7,10 @@ public class Third {
     }
 
 
-    public static int sumOfSquaresOfNumbers (){
+    public static int sumOfSquaresOfNumbers() {
         int sum = 0;
-        for (int i = 1; i <=100;i ++){
-            sum += Math.pow(i,2);
+        for (int i = 1; i <= 100; i++) {
+            sum += Math.pow(i, 2);
         }
         return sum;
     }

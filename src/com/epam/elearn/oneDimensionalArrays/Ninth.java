@@ -7,11 +7,11 @@ package com.epam.elearn.oneDimensionalArrays;
 
 public class Ninth {
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    int mass [] = {4,6,2,7,8,4,11,7,11,9,2,2};
-    System.out.println(getMostPopularNumber(mass));
-}
+        int mass[] = {4, 6, 2, 7, 8, 4, 11, 7, 11, 9, 2, 2};
+        System.out.println(getMostPopularNumber(mass));
+    }
 
 
     public static int getMostPopularNumber(int[] data) {

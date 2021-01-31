@@ -19,7 +19,7 @@ public class Fifth {
         int answer = scanner.nextInt();
 
         int[] array = new int[answer];
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(50);
             System.out.print(array[i] + " ");
         }

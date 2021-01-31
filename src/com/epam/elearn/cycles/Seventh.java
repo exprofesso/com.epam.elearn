@@ -26,13 +26,13 @@ public class Seventh {
             b = Integer.parseInt(scanner.nextLine());
         } while ((a <= 0) && (b <= 0));
 
-        while(a != 0) {
+        while (a != 0) {
             arr[a % 10]++;
             a /= 10;
         }
 
-        while(b != 0) {
-            if(arr[b % 10] != 0) {
+        while (b != 0) {
+            if (arr[b % 10] != 0) {
                 System.out.println(b % 10);
                 arr[b % 10] = 0;
             }

@@ -21,6 +21,7 @@ public class Fourteenth {
 
         decomposition(mass);
     }
+
     //заполнение массива от 1 до k
     public static int[] populate(int mas[]) {
         for (int i = 0, j = 0; i < mas.length; i++, j++) {
@@ -51,6 +52,7 @@ public class Fourteenth {
             n = 0;
         }
     }
+
     //реализация алгоритма согласно примера 153=1*1*1+5*5*5+3*3*3=1+125+27
     public static int sum(int mas2[], int n) {
         int totalSum = 0;

@@ -10,7 +10,7 @@ public class Sixth {
         System.out.println(seaBattle(1.4, 0.7));
     }
 
-    public static boolean seaBattle(double x, double y){
+    public static boolean seaBattle(double x, double y) {
         return (x >= -4 && x <= 4 && y >= -3 && y <= 0) || (x >= -2 && x <= 2 && y >= 0 && y <= 4);
     }
 }

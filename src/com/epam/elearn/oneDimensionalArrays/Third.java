@@ -29,11 +29,11 @@ public class Third {
         for (int i = 0; i < array.length; i++) {
             if (array[i] > 0) {
                 posirive++;
-            } else if(array[i] < 0) {
+            } else if (array[i] < 0) {
                 negative++;
             } else
                 zero++;
-            }
+        }
 
 
         System.out.println("Количество положительных чисел : " + posirive);

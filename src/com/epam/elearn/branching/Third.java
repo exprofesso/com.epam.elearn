@@ -5,7 +5,7 @@ package com.epam.elearn.branching;
  */
 public class Third {
     public static void main(String[] args) {
-        System.out.println(straightLine(1,2.0,2,3.0,3, 4.0));
+        System.out.println(straightLine(1, 2.0, 2, 3.0, 3, 4.0));
     }
 
     public static boolean straightLine(double x1, double y1, double x2, double y2, double x3, double y3) {

@@ -1,7 +1,6 @@
 package com.epam.elearn.oneDimensionalArrays;
 
 import java.util.Random;
-import java.util.Scanner;
 
 /*
 6. Задана последовательность N вещественных чисел.
@@ -14,14 +13,14 @@ public class Sixth {
     }
 
     public static void primeNumbers() {
-            int[] arr = new Random().ints(50,0, 50).toArray();
-            int sum = 0;
-            for (int i = 0; i < arr.length; i++) {
-                if (isPrime(i)) {
-                    sum+=arr[i];
-                }
+        int[] arr = new Random().ints(50, 0, 50).toArray();
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (isPrime(i)) {
+                sum += arr[i];
             }
-            System.out.println("Summ: " + sum);
+        }
+        System.out.println("Summ: " + sum);
     }
 
 

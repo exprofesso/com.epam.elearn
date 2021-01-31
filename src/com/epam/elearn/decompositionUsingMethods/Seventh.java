@@ -4,11 +4,11 @@ package com.epam.elearn.decompositionUsingMethods;
 public class Seventh {
 
     public static void main(String[] args) {
-     int factorial[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int factorial[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int summa = 0;
 
-        for (int i = 0; i < factorial.length; i++){
-            if(factorial[i] % 2 != 0){
+        for (int i = 0; i < factorial.length; i++) {
+            if (factorial[i] % 2 != 0) {
                 summa = summa + factorial(factorial[i]);
             }
         }

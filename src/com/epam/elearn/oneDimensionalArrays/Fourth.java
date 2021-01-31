@@ -37,17 +37,16 @@ public class Fourth {
             }
 
         }
-            System.out.println();
-            System.out.println("Максимальное число в массиве " + max);
-            System.out.println("Минимальное число в массиве " + min);
-            System.out.println();
-            array[maxPoint] = min;
-            array[minPoint] = max;
+        System.out.println();
+        System.out.println("Максимальное число в массиве " + max);
+        System.out.println("Минимальное число в массиве " + min);
+        System.out.println();
+        array[maxPoint] = min;
+        array[minPoint] = max;
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
     }
-
 
 
     public static void enterArrayRandom(int[] mas) {

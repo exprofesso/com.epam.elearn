@@ -7,10 +7,10 @@ import java.util.Scanner;
 // 10. Найти положительные элементы главной диагонали квадратной матрицы.
 public class Ten {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
 
-       Scanner scanner = new Scanner(System.in);
-       Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
         //формирование матрицы
         System.out.println("Введите количество строк и столбцов: ");
         int matrix = scanner.nextInt();
@@ -27,11 +27,11 @@ public class Ten {
             }
             System.out.println();
         }
-
-        for (int i = 0, j = 0; i < array.length; i++, j++) { //поиск положительных элементов главной диагонали матрицы
-
-            if (array[i][j] > 0) {
-                System.out.print(array[i][j] + " ");
+        //поиск положительных элементов главной диагонали матрицы
+        for (int i = 0; i < array.length; i++) {
+            // for (int i = 0, j = 0; i < array.length; i++, j++) {
+            if (array[i][i] > 0) {
+                System.out.print(array[i][i] + " ");
             }
         }
     }

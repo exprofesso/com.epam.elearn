@@ -18,15 +18,15 @@ public class First {
 
     }
 
-    public  static  int nod(int n1, int n2){
-    int nod = 0;
+    public static int nod(int n1, int n2) {
+        int nod = 0;
         for (int i = 1; i <= n1 || i <= n2; i++) {
-        if (n1 % i == 0 && n2 % i == 0) {
-            nod = i;
+            if (n1 % i == 0 && n2 % i == 0) {
+                nod = i;
+            }
         }
-    }
         return nod;
-}
+    }
 
     public static int nok(int n1, int n2) {//Нахождение НОК
         int nod = nod(n1, n2);

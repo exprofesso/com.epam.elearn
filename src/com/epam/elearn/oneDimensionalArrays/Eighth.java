@@ -11,14 +11,14 @@ public class Eighth {
 
         int[] arr = generateArray(15);
 
-        for (int ele: arr) {
+        for (int ele : arr) {
             System.out.print(ele + " ");
         }
         System.out.println();
         System.out.println("_____________");
-        int [] minArr = deleteMinValue(arr);
+        int[] minArr = deleteMinValue(arr);
 
-        for (int ele: minArr) {
+        for (int ele : minArr) {
             System.out.print(ele + " ");
         }
 
@@ -62,8 +62,8 @@ public class Eighth {
     private static int[] generateArray(int num) {
         int[] arr = new int[num];
         Random rand = new Random();
-        for (int i=0; i<num; i++) {
-            arr[i]=rand.nextInt(1000);
+        for (int i = 0; i < num; i++) {
+            arr[i] = rand.nextInt(1000);
         }
         return arr;
     }

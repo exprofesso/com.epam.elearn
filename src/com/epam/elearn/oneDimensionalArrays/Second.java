@@ -37,6 +37,7 @@ public class Second {
         System.out.println("Количество замен: " + count);
         System.out.println();
     }
+
     public static void enterArrayRandom(int[] mas) {
         Random random = new Random();
         for (int i = 0; i < mas.length; i++) {

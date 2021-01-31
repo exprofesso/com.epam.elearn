@@ -16,7 +16,7 @@ public class Third {
         System.out.println("площать шестиугольника равна " + square(si) * 6);
     }
 
-    static double square(double a){
+    static double square(double a) {
 
         double b = (Math.sqrt(3) / 4) * Math.pow(a, 2);
         return b;

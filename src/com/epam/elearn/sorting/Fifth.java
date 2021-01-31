@@ -13,20 +13,20 @@ public class Fifth {
         int right = arr.length - 1;
 
         do {
-            for (int i = left; i < right; i++){
-                if(arr[i] > arr [i + 1]){
+            for (int i = left; i < right; i++) {
+                if (arr[i] > arr[i + 1]) {
                     buffer = arr[i];
-                    arr [i] = arr[i + 1];
-                    arr [i + 1] = buffer;
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = buffer;
                 }
             }
-            right --;
-            for ( int i = right; i > left; i-- ){
+            right--;
+            for (int i = right; i > left; i--) {
 
-                if (arr [i] < arr [i - 1]){
+                if (arr[i] < arr[i - 1]) {
                     buffer = arr[i];
-                    arr [i] = arr[i - 1];
-                    arr [i - 1] = buffer;
+                    arr[i] = arr[i - 1];
+                    arr[i - 1] = buffer;
                 }
             }
             left++;
@@ -37,14 +37,13 @@ public class Fifth {
         printArray(arr);
 
 
-
     }
 
     // метод вывода массива
 
-    public static void printArray(int[] arr){
+    public static void printArray(int[] arr) {
         System.out.print("array: ");
-        for (int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
     }

@@ -6,11 +6,11 @@ package com.epam.elearn.decompositionUsingMethods;
  */
 
 public class Fifteenth {
-        public static void main(String[] args) {
-            for (int i = 2; i <= 9; i++) {
-                findNumbers(i);
-            }
+    public static void main(String[] args) {
+        for (int i = 2; i <= 9; i++) {
+            findNumbers(i);
         }
+    }
 
     private static void findNumbers(int n) {
         int[] mas = new int[n];

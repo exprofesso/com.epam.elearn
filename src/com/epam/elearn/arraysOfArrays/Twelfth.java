@@ -6,7 +6,8 @@ import java.util.Scanner;
 // 12. Отсортировать строки матрицы по возрастанию и убыванию значений элементов.
 public class Twelfth {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -26,17 +27,26 @@ public class Twelfth {
             }
             System.out.println();
         }
+        sort(array, true);
+        sort(array, false);
+    }
 
+    public static void sort(int array[][], boolean a) {
         int buffer;
         boolean trigger = true; //переключатель
 
-        System.out.println("Сортировка по возрастанию ");
+        if (a) {
+            System.out.println("Сортировка по возрастанию ");
+        } else {
+            System.out.println("Сортировка по убыванию ");
+        }
+
         for (int i = 0; i < array.length; i++) {
             trigger = false;
             while (!trigger) {
                 trigger = true;
                 for (int j = 0; j < array[i].length - 1; j++) {
-                    if (array[i][j] > array[i][j + 1]) {
+                    if ((a && array[i][j] > array[i][j + 1]) || (!a && array[i][j] < array[i][j + 1])) {
                         trigger = false;
                         buffer = array[i][j];
                         array[i][j] = array[i][j + 1];
@@ -46,28 +56,6 @@ public class Twelfth {
             }
         }
 
-        for (int i = 0; i < array.length; i++) { //вывод первой матицы
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.print(array[i][j] + "  ");
-            }
-            System.out.println();
-        }
-
-        System.out.println("Сортировка по убыванию ");
-        for (int i = 0; i < array.length; i++) {
-            trigger = false;
-            while (!trigger) {
-                trigger = true;
-                for (int j = 0; j < array[i].length - 1; j++) {
-                    if (array[i][j] < array[i][j + 1]) {
-                        trigger = false;
-                        buffer = array[i][j];
-                        array[i][j] = array[i][j + 1];
-                        array[i][j + 1] = buffer;
-                    }
-                }
-            }
-        }
 
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -75,7 +63,5 @@ public class Twelfth {
             }
             System.out.println();
         }
-
-
     }
 }
