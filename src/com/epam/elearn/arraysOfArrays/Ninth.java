@@ -11,31 +11,40 @@ import java.util.Scanner;
 
 public class Ninth {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
-        System.out.println("Укажите размер матрицы");
-        int n = scanner.nextInt();
+        //формирование матрицы
+        System.out.println("ведите количество строк и столбцов");
+        int strings = scanner.nextInt();
 
-        int[][] array = new int[n][n];
-        int answer = 0;
-        int count = 0;
+        int a[][] = new int[strings][strings];
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = random.nextInt(10);
-                count += array[i][j];
-                System.out.print(array[i][j]);
+        int sum[] = new int[strings];
+        int max_sum_column = 0;
+        int max = -1;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+
+                a[i][j] = (int) (Math.random() * 10);
+                System.out.printf("%10d", a[i][j]);
             }
-            if (count > answer) {
-                answer = count;
+            System.out.println();
 
+        }
+        for (int i = 0; i < a.length; i++) {//столбцы
+            for (int j = 0; j < a[i].length; j++) {//строки
+                sum[i] = sum[i] + a[j][i];
             }
-            count = 0;
-            System.out.println("");
+
         }
 
-        System.out.println(answer);
+        for (int i = 0; i < a.length - 1; i++) {
+            if (sum[i] > max) {
+                max = sum[i];
+                max_sum_column = i;
+            }
+        }
 
+
+        System.out.println(max_sum_column + 1);
     }
 }
