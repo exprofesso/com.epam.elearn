@@ -5,7 +5,7 @@ package com.epam.elearn.arrayOfCharacters;
 public class Third {
 
     public static void main(String[] args) {
-        String example = "good day 2, but I like 3";
+        String example = "good day 25, but I like 35";
         int count = 0;
         char[] numeral = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
