@@ -12,7 +12,6 @@ public class Fourh {
 
     public static int count(String text) {
 
-        StringBuilder stringBuilder = new StringBuilder();
         char[] numeral = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         boolean some = false;
         int count = 0;
