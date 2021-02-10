@@ -13,13 +13,13 @@ public class Eighth {
         System.out.println(longWord(example));
     }
 
-    public static String longWord (String a){
+    public static String longWord(String a) {
         String longWord = "";
         int count = 0;
         String[] temp = a.split(" ");
 
-        for (int i = 1; i < temp.length; i++){
-            if(temp[i].length() > count){
+        for (int i = 1; i < temp.length; i++) {
+            if (temp[i].length() > count) {
                 longWord = temp[i];
                 count = temp[i].length();
             }
