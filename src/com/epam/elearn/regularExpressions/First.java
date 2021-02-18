@@ -10,6 +10,7 @@ package com.epam.elearn.regularExpressions;
  */
 
 
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 public class First {
@@ -20,12 +21,14 @@ public class First {
                 "Один. Два.\n" +
                 "Один. Два. Три. Четыре. Пять.\n" +
                 "Один сто девятьсот.\n" +
-                "Один на улице. Два на море. Три на природе.";
+                "Один на улице. Два на море. Три в лесу на природе.";
 
-        sortParagraph(example);
+        word(example);
+
+
     }
 
-    private static String[] splitSentences(String text) {
+    public static String[] splitSentences(String text) {
         Pattern pattern = Pattern.compile("\\.*[.!?]\\s*");
         return pattern.split(text);
     }
@@ -53,6 +56,40 @@ public class First {
         }
         System.out.println();
     }
+
+    public static String[] splitLength (String text){
+        Pattern pattern = Pattern.compile("\\s*(\\s|,|;|:)\\s*");
+        return pattern.split(text);
+    }
+
+    public static void word(String a){
+
+        String [] sort = a.split("\n");
+        for (int i = 0; i < sort.length; i++){
+            String temp [] = splitSentences(sort[i]);
+            for (int j = 0; j < temp.length; j++){
+             String[] words = splitLength(temp[j]);
+
+                // сортировка слов
+                for (int z = words.length - 1; z >= 0; z--){
+                    for (int y = 0; y < z; y++){
+                        if(words[y].length() > words[y + 1].length()){
+                            String change = words[y];
+                            words[y] = words[y + 1];
+                            words[y + 1] = change;
+                        }
+                    }
+                }
+                for (int q = 0; q < words.length; q++){
+                    System.out.print(words[q] + " ");
+                }
+                System.out.print("\b. ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+     
 }
 
 
