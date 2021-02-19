@@ -11,6 +11,7 @@ package com.epam.elearn.regularExpressions;
 
 
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class First {
@@ -23,9 +24,47 @@ public class First {
                 "Один сто девятьсот.\n" +
                 "Один на улице. Два на море. Три в лесу на природе.";
 
-        word(example);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Выберете что отсертировать \n" +
+                " 1 для сортировки абзацев \n" +
+                " 2 для сортировки предложений \n" +
+                " 3 для сортировки лексем \n" +
+                " 4 для выхода из программы");
+        int choose = 0;
 
 
+        while (choose != 4) {
+            choose = scanner.nextInt();
+            String a = "";
+            if (choose == 3) {
+                System.out.println("Укажите лексему для сортировки ");
+                a = scanner.nextLine();
+                System.out.println(a);
+            }
+            switch (choose) {
+                case (1):
+                    sortParagraph(example);
+                    break;
+                case (2):
+                    word(example);
+                    break;
+                case (3):
+                    lexeme(example, a);
+                    break;
+                case (4):
+                    System.out.println("До свидания!");
+                    break;
+                default:
+                    System.out.println("Вы выбрали не верный пункт");
+                    break;
+            }
+
+//            System.out.println("Укажите лексему для сортировки ");
+//                a = scanner.nextLine();
+//            System.out.println(a);
+//                lexeme(example, a);
+        }
     }
 
     public static String[] splitSentences(String text) {
@@ -57,30 +96,32 @@ public class First {
         System.out.println();
     }
 
-    public static String[] splitLength (String text){
+    public static String[] splitLength(String text) {
         Pattern pattern = Pattern.compile("\\s*(\\s|,|;|:)\\s*");
         return pattern.split(text);
     }
 
-    public static void word(String a){
 
-        String [] sort = a.split("\n");
-        for (int i = 0; i < sort.length; i++){
-            String temp [] = splitSentences(sort[i]);
-            for (int j = 0; j < temp.length; j++){
-             String[] words = splitLength(temp[j]);
+    // сортировка предложений по длине слов
+    public static void word(String a) {
+
+        String[] sort = a.split("\n");
+        for (int i = 0; i < sort.length; i++) {
+            String temp[] = splitSentences(sort[i]);
+            for (int j = 0; j < temp.length; j++) {
+                String[] words = splitLength(temp[j]);
 
                 // сортировка слов
-                for (int z = words.length - 1; z >= 0; z--){
-                    for (int y = 0; y < z; y++){
-                        if(words[y].length() > words[y + 1].length()){
+                for (int z = words.length - 1; z >= 0; z--) {
+                    for (int y = 0; y < z; y++) {
+                        if (words[y].length() > words[y + 1].length()) {
                             String change = words[y];
                             words[y] = words[y + 1];
                             words[y + 1] = change;
                         }
                     }
                 }
-                for (int q = 0; q < words.length; q++){
+                for (int q = 0; q < words.length; q++) {
                     System.out.print(words[q] + " ");
                 }
                 System.out.print("\b. ");
@@ -89,8 +130,57 @@ public class First {
         }
         System.out.println();
     }
-     
+
+
+    // сортировка по лексемам
+
+    public static void lexeme(String text, String letter) {
+        String[] sort = text.split("\n");
+        for (int i = 0; i < sort.length; i++) {
+            String temp[] = splitSentences(sort[i]);
+            for (int j = 0; j < temp.length; j++) {
+                String[] words = splitLength(temp[j]);
+
+                for (int z = words.length - 1; z >= 0; z--) {
+                    for (int y = 0; y < z; y++) {
+                        int right = 0;
+                        int left = 0;
+                        for (int t = 0; t < words[y].length(); t++) {
+                            if (String.valueOf(words[y].charAt(t)).compareToIgnoreCase(letter) == 0) {
+                                left++;
+                            }
+                        }
+                        for (int t = 0; t < words[y + 1].length(); t++) {
+                            if (String.valueOf(words[y + 1].charAt(t)).compareToIgnoreCase(letter) == -1) ;
+                            right++;
+                        }
+                        if (left < right) {
+                            String cloud = words[y];
+                            words[y] = words[y + 1];
+                            words[y + 1] = cloud;
+
+                            // сортировка по алфавиту
+                        } else if (left == right) {
+                            String[] abc = {words[y], words[y + 1]};
+                            Arrays.sort(abc);
+                            words[y] = abc[0];
+                            words[y + 1] = abc[1];
+                        }
+                    }
+                }
+                for (int q = 0; q < words.length; q++) {
+                    System.out.print(words[q] + " ");
+                }
+                System.out.print("\b. ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
 }
+
+
 
 
 
