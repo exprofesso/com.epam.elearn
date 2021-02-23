@@ -28,11 +28,18 @@ public class Fourth {
         trains[8] = new Train("Mogilev", "76", "17:25");
         trains[9] = new Train("Vitebsk", "19", "17:25");
 
+
         sortNumber(trains);
         System.out.print(Arrays.toString(trains));
 
+
+        System.out.println("\n**********\n");
+
+        System.out.println(Train.toSee(trains, "32"));
+
     }
 
+    // сортировка по номеру поезда
     public static void sortNumber(Train[] trains) {
         Train temp;
         for (int i = 0; i < trains.length; i++) {
@@ -44,7 +51,6 @@ public class Fourth {
                 }
             }
         }
-
     }
 
 }
@@ -90,5 +96,16 @@ class Train {
     @Override
     public String toString() {
         return "\nTrain { city = " + city + " " + "number = " + number + " timeGo = " + timeGo + "}";
+    }
+
+
+    // вывод информации о конкретном поезде
+    public static String toSee(Train[] trains, String number) {
+        for (int i = 0; i < trains.length; i++) {
+            if (trains[i].number.equalsIgnoreCase(number)) {
+                return "Информация о поезде " + number + " станция прибытия " + trains[i].city + " время отправления " + trains[i].timeGo;
+            }
+        }
+        return null;
     }
 }
