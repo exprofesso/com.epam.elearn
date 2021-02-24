@@ -46,12 +46,12 @@ public class Fourth {
         System.out.println("**********");
 
         sortCity(trains);
-     //   System.out.print(Arrays.toString(trains));
-//        System.out.println();
-//        for(int i = 0; i < trains.length; i++){
-//            System.out.println(trains[i].city + " " + trains[i].number + " " + format.format(trains[i].timeGo));
-//        }
-        sortTime(trains, "Vitebsk");
+
+        sortTimeGo(trains, "Vitebsk");
+        for (int i = 0; i < trains.length; i++) {
+            if (trains[i].city.equalsIgnoreCase("vitebsk"))
+                System.out.println(trains[i].city + " " + trains[i].number + " " + format.format(trains[i].timeGo));
+        }
 
     }
 
@@ -69,6 +69,7 @@ public class Fourth {
         }
     }
 
+    // сортировка по городу
     public static void sortCity(Train[] trains) {
         Train temp;
         for (int i = 0; i < trains.length; i++) {
@@ -89,7 +90,8 @@ public class Fourth {
         }
     }
 
-    public static void sortTime(Train[] trains, String city) {
+    // сортировка по времени
+    public static void sortTimeGo(Train[] trains, String city) {
         Train temp;
         for (int i = 0; i < trains.length; i++) {
             for (int j = trains.length - 1; j > i; j--) {
@@ -152,7 +154,6 @@ class Train {
     public String toString() {
         return "\nTrain { city = " + city + " " + "number = " + number + " timeGo = " + timeGo + "}";
     }
-
 
     // вывод информации о конкретном поезде
     public static String toSee(Train[] trains, String number) {
