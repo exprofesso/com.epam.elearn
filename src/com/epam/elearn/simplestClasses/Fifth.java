@@ -11,36 +11,38 @@ package com.epam.elearn.simplestClasses;
 public class Fifth {
     public static void main(String[] args) {
 
-        Count count = new Count(1,1,40,1);
-        for (int i = 0; i <= count.getCountMax(); i++){
+        Count count = new Count(1, 40, 1);
+        Count count1 = new Count(87, 100, 15);
+
+        for (int i = 0; i <= count.getCountMax(); i++) {
             System.out.println(count);
             count.increase();
         }
-//        for (int i = count.getCountMax(); i >= count.getCountMin(); i -- ){
-//            System.out.println(count);
-//            count.reduction();
-//        }
+
+        for (int i = count1.getCountMax(); i >= count1.getCountMin(); i--) {
+            System.out.println(count1);
+            count1.reduction();
+        }
     }
 
 
 }
 
-class Count{
+class Count {
     private int count;
     private int countRandom;
     private int countMax;
     private int countMin;
 
-    public Count(){
+    public Count() {
     }
 
-    public Count(int count){
+    public Count(int count) {
         this.count = count;
     }
 
-    public Count(int count, int countRandom, int countMax, int countMin) {
+    public Count(int count, int countMax, int countMin) {
         this.count = count;
-        this.countRandom = countRandom;
         this.countMax = countMax;
         this.countMin = countMin;
     }
@@ -83,21 +85,24 @@ class Count{
                 "count=" + count +
                 '}';
     }
-     void increase (){
-         if(count == countMax){
-             System.out.println("Вот мы и пришли к верхнему приделу");
-         } else if(count > countMax){
-             System.out.println("Вы вышли за предел");
-             count--;
-         }
+
+    void increase() {
+        if (count == countMax) {
+            System.out.println("Вот мы и пришли к верхнему приделу");
+        } else if (count > countMax) {
+            System.out.println("Вы вышли за предел");
+            count--;
+        }
         count++;
     }
-    void reduction(){
-        if (count == countMin){
+
+    void reduction() {
+        if (count == countMin) {
             System.out.println("Вот вы и пришли к нижнему пределю");
-        } else if (count < countMin){
+        } else if (count < countMin) {
             System.out.println("Вы вышли за предел");
             count++;
         }
+        count--;
     }
 }
