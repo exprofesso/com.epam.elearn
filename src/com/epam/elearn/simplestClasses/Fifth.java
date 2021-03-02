@@ -8,6 +8,8 @@ package com.epam.elearn.simplestClasses;
 Написать код, демонстрирующий все возможности класса.
  */
 
+import java.util.Random;
+
 public class Fifth {
     public static void main(String[] args) {
 
@@ -23,9 +25,9 @@ public class Fifth {
             System.out.println(count1);
             count1.reduction();
         }
+        System.out.println(Count.status(count));
+        System.out.println(Count.status(count1));
     }
-
-
 }
 
 class Count {
@@ -104,5 +106,25 @@ class Count {
             count++;
         }
         count--;
+    }
+
+    public static String status(Count count) {
+        return count.toString();
+    }
+
+    void countRandomMax() {
+        Random random = new Random();
+        setCountRandom(random.nextInt(100));
+        while (countMax > countMin) {
+            setCountMax(random.nextInt(100));
+            setCountMin(random.nextInt(100));
+        }
+        if (countRandom == countMax) {
+            System.out.println("Вот вы и пришли к нижнему пределю");
+        } else if (countRandom < countMax) {
+            System.out.println("Вы вышли за предел");
+            countRandom--;
+        }
+        count++;
     }
 }
