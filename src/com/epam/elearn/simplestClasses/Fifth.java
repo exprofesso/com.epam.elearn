@@ -15,6 +15,7 @@ public class Fifth {
 
         Count count = new Count(1, 40, 1);
         Count count1 = new Count(87, 100, 15);
+        Count count2 = new Count();
 
         for (int i = 0; i <= count.getCountMax(); i++) {
             System.out.println(count);
@@ -25,8 +26,14 @@ public class Fifth {
             System.out.println(count1);
             count1.reduction();
         }
+
+        count2.countRandom();
+
         System.out.println(Count.status(count));
         System.out.println(Count.status(count1));
+        System.out.println(Count.statusRandom(count2));
+
+
     }
 }
 
@@ -37,10 +44,6 @@ class Count {
     private int countMin;
 
     public Count() {
-    }
-
-    public Count(int count) {
-        this.count = count;
     }
 
     public Count(int count, int countMax, int countMin) {
@@ -88,6 +91,7 @@ class Count {
                 '}';
     }
 
+    // увелечение величины счетчика
     void increase() {
         if (count == countMax) {
             System.out.println("Вот мы и пришли к верхнему приделу");
@@ -98,6 +102,7 @@ class Count {
         count++;
     }
 
+    // уменьшение величины счетчика
     void reduction() {
         if (count == countMin) {
             System.out.println("Вот вы и пришли к нижнему пределю");
@@ -112,19 +117,59 @@ class Count {
         return count.toString();
     }
 
-    void countRandomMax() {
+    public static String statusRandom(Count count) {
+        return "Count{count=" + count.countRandom + "}";
+    }
+
+
+    // значение счетчика, мин. и макс значения задано рандомно и проход в обе стороны с попытной выйти за пределы
+    void countRandom() {
         Random random = new Random();
-        setCountRandom(random.nextInt(100));
-        while (countMax > countMin) {
-            setCountMax(random.nextInt(100));
-            setCountMin(random.nextInt(100));
+        int tempRandom = random.nextInt(100);
+        int tempMax = random.nextInt(100);
+        int tempMin = random.nextInt(100);
+
+        while (tempRandom < tempMin || tempRandom > tempMax) {
+            tempRandom = random.nextInt(100);
+            tempMax = random.nextInt(100);
+            tempMin = random.nextInt(100);
         }
-        if (countRandom == countMax) {
-            System.out.println("Вот вы и пришли к нижнему пределю");
-        } else if (countRandom < countMax) {
-            System.out.println("Вы вышли за предел");
-            countRandom--;
+        setCountRandom(tempRandom);
+        setCountMax(tempMax);
+        setCountMin(tempMin);
+        System.out.println("min " + tempMin);
+        System.out.println("ran " + tempRandom);
+        System.out.println("max " + tempMax);
+
+        System.out.println("*******");
+        System.out.println("Пошли вверх");
+        for (int i = countRandom; i <= countMax + 1; i++) {
+            if (countRandom == countMax) {
+                System.out.println("Вот мы и пришли к верхнему приделу");
+                System.out.println(countRandom);
+                countRandom++;
+            } else if (countRandom > countMax) {
+                System.out.println("Вы вышли за предел");
+                countRandom--;
+            } else {
+                System.out.println(countRandom);
+                countRandom++;
+            }
         }
-        count++;
+        System.out.println("А теперь пошли вниз");
+        for (int i = countMax; i >= countMin - 1; i--) {
+            if (countRandom == countMin) {
+                System.out.println("Вот мы и пришли к нижнему приделу");
+                System.out.println(countRandom);
+                countRandom--;
+            } else if (countRandom < countMin) {
+                System.out.println("Вы вышли за предел");
+                countRandom++;
+            } else {
+                System.out.println(countRandom);
+                countRandom--;
+            }
+        }
+        
     }
 }
