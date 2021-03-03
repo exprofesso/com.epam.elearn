@@ -24,8 +24,8 @@ public class Second {
 }
 
 class Test2 {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
     public Test2() {
     }
