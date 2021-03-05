@@ -28,19 +28,19 @@ public class Third {
 
         bestStudent(students);
     }
-
+        // выборка студентов с 9 и 10 балами
     public static void bestStudent(Student[] student) {
         boolean best = true;
 
         for (int i = 0; i < student.length; i++) {
             int minScore = 10;
-            for (int j = 0; j < student[i].academicPerformance.length; j++) {
+            for (int j = 0; j < student[i].getAcademicLength(); j++) {
                 if (student[i].getAcademicPerformanceId(j) < minScore) {
-                    minScore = student[i].academicPerformance[j];
+                    minScore = student[i].getAcademicPerformanceId(j);
                 }
             }
             if (minScore >= 9) {
-                System.out.println("Отличный студент " + student[i].fio + " из группы " + student[i].getNumberGroup());
+                System.out.println("Отличный студент " + student[i].getFio() + " из группы " + student[i].getNumberGroup());
             }
         }
     }
@@ -48,9 +48,9 @@ public class Third {
 
 class Student {
 
-    String fio;
-    int numberGroup;
-    int[] academicPerformance = new int[5];
+    private String fio;
+    private int numberGroup;
+    private int[] academicPerformance = new int[5];
 
     public Student() {
     }
@@ -94,6 +94,9 @@ class Student {
 
     public void setAcademicPerformance(int[] academicPerformance) {
         this.academicPerformance = academicPerformance;
+    }
+    public int getAcademicLength(){
+        return academicPerformance.length;
     }
 
 }
