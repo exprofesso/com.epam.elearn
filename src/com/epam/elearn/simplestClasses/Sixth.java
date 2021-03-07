@@ -10,7 +10,24 @@ package com.epam.elearn.simplestClasses;
 
 public class Sixth {
 
+    public static void main(String[] args) {
+        Time time = new Time(42);
+        Time time1 = new Time(543, 66);
+        Time time2 = new Time(52, 2345, 523);
 
+        System.out.println(time.toString());
+        System.out.println(time1.toString());
+        System.out.println(time2.toString());
+
+        time.setHour(13);
+        time1.setMinute(24);
+        time2.setSecond(41);
+
+        System.out.println(time.toString());
+        System.out.println(time1.toString());
+        System.out.println(time2.toString());
+
+    }
 }
 
 class Time {
@@ -23,37 +40,57 @@ class Time {
     }
 
     public Time(int hour) {
-        if (hour > 24 || hour < 0) {
+        if (hour < 24 && hour > 0) {
             this.hour = hour;
+        } else {
+            hour = 0;
+            this.hour = 0;
         }
+
         this.minute = 0;
         this.second = 0;
     }
 
     public Time(int hour, int minute) {
-        if (hour > 24 || hour < 0) {
+        if (hour < 24 && hour > 0) {
             this.hour = hour;
-            if (minute > 60 || minute < 0) {
-                this.minute = minute;
-            } else {
-                minute = 0;
-                this.minute = minute;
-            }
         } else {
             hour = 0;
             this.hour = hour;
+        }
+        if (minute < 60 && minute > 0) {
+            this.minute = minute;
+        } else {
+            minute = 0;
+            this.minute = minute;
         }
         this.second = 0;
     }
 
     public Time(int hour, int minute, int second) {
-        this.hour = hour;
-        this.minute = minute;
-        this.second = second;
+        if (hour < 24 && hour > 0) {
+            this.hour = hour;
+        } else {
+            hour = 0;
+            this.hour = 0;
+        }
+        if (minute < 60 && minute > 0) {
+            this.minute = minute;
+        } else {
+            minute = 0;
+            this.minute = minute;
+        }
+
+        if (second < 60 && second > 0) {
+            this.second = second;
+        } else {
+            second = 0;
+            this.second = 0;
+        }
     }
 
     public void setHour(int hour) {
-        if (hour < 24 || hour > 0) {
+        if (hour < 24 && hour > 0) {
             this.hour = hour;
         } else {
             hour = 0;
@@ -68,7 +105,7 @@ class Time {
     }
 
     public void setMinute(int minute) {
-        if (minute < 60 || minute > 0) {
+        if (minute < 60 && minute > 0) {
             this.minute = minute;
         } else {
             minute = 0;
@@ -82,12 +119,21 @@ class Time {
     }
 
     public void setSecond(int second) {
-        if (second < 60 || second > 0) {
+        if (second < 60 && second > 0) {
             this.second = second;
         } else {
             second = 0;
             this.second = second;
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return "Time{" +
+                "hour=" + hour +
+                ", minute=" + minute +
+                ", second=" + second +
+                '}';
     }
 }
