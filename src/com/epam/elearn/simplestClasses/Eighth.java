@@ -32,8 +32,15 @@ public class Eighth {
         customers[8] = new Customer(9, "Gogol", "Nilola", "","Minsk, Pobedy 1-79", 235656745, 154);
         customers[9] = new Customer(10, "Tolstoi", "Lev", "","Minsk, Tanka 1-345", 764635435, 71);
 
-        
+//        for (int i = 0; i < customers.length; i++){
+//            System.out.println(customers[i].toString());
+//        }
+        System.out.println("**********");
 
+        Customer.sortNumber(customers, 400000000, 600000000);
+//        for (int i = 0; i < customers.length; i++){
+//            System.out.println(customers[i].toString());
+//        }
 
     }
 }
@@ -135,7 +142,7 @@ class Customer{
     public static void sortNumber(Customer[] customer, int from, int to) {
         if(from < to){
             for(int i = 0; i < customer.length; i++){
-                if(customer[i].numberCard > from || customer[i].numberCard < to){
+                if(customer[i].numberCard > from && customer[i].numberCard < to){
                     System.out.println(customer[i].toString());
                 }
             }
