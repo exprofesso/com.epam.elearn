@@ -22,15 +22,15 @@ public class Eighth {
         Customer[] customers = new Customer[10];
 
         customers[0] = new Customer(1, "Ivanov", "Dima", "Petrovich", "Minsk, Nemiga 21-1-5", 434223451, 112);
-        customers[1] = new Customer(2, "Petrov", "Ivan", "Alex","Minsk, Pobedy 41-5-8", 453355329, 115);
-        customers[2] = new Customer(3, "Sidoroff", "Sergey", "","Minsk, Lenina 65-9-1", 423455329, 117);
-        customers[3] = new Customer(4, "Kuznecof", "Alex", "Ivanovich","Minsk, Gai 221-46", 343453721, 101);
-        customers[4] = new Customer(5, "Golub", "Vadim", "Gennadivich","Minsk, Nemiga 1-44", 123764326, 99);
-        customers[5] = new Customer(6, "Putin", "Vova", "Petrovich","Minsk, Kolosa 99", 33546324, 454);
-        customers[6] = new Customer(7, "Davidof", "Mike", "Nikiforovich","Minsk, Nemiga 61-36", 753456553, 658);
-        customers[7] = new Customer(8, "Podkolzin", "Maks", "Anatolivich","Minsk, Radialnaia 3", 343533956, 17);
-        customers[8] = new Customer(9, "Gogol", "Nilola", "","Minsk, Pobedy 1-79", 235656745, 154);
-        customers[9] = new Customer(10, "Tolstoi", "Lev", "","Minsk, Tanka 1-345", 764635435, 71);
+        customers[1] = new Customer(2, "Petrov", "Ivan", "Alex", "Minsk, Pobedy 41-5-8", 453355329, 115);
+        customers[2] = new Customer(3, "Sidoroff", "Sergey", "", "Minsk, Lenina 65-9-1", 423455329, 117);
+        customers[3] = new Customer(4, "Kuznecof", "Alex", "Ivanovich", "Minsk, Gai 221-46", 343453721, 101);
+        customers[4] = new Customer(5, "Golub", "Vadim", "Gennadivich", "Minsk, Nemiga 1-44", 123764326, 99);
+        customers[5] = new Customer(6, "Putin", "Vova", "Petrovich", "Minsk, Kolosa 99", 33546324, 454);
+        customers[6] = new Customer(7, "Davidof", "Mike", "Nikiforovich", "Minsk, Nemiga 61-36", 753456553, 658);
+        customers[7] = new Customer(8, "Podkolzin", "Maks", "Anatolivich", "Minsk, Radialnaia 3", 343533956, 17);
+        customers[8] = new Customer(9, "Gogol", "Nilola", "", "Minsk, Pobedy 1-79", 235656745, 154);
+        customers[9] = new Customer(10, "Tolstoi", "Lev", "", "Minsk, Tanka 1-345", 764635435, 71);
 
 //        for (int i = 0; i < customers.length; i++){
 //            System.out.println(customers[i].toString());
@@ -44,7 +44,8 @@ public class Eighth {
 
     }
 }
-class Customer{
+
+class Customer {
     int id;
     String surname;
     String name;
@@ -53,7 +54,7 @@ class Customer{
     int numberCard;
     int numberAccount;
 
-    public Customer(int id, String surname, String name, int numberAccount){
+    public Customer(int id, String surname, String name, int numberAccount) {
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -138,11 +139,15 @@ class Customer{
                 ", numberAccount=" + numberAccount +
                 '}';
     }
+    public static void sortName(Customer[] customers){
+        
+    }
+
 
     public static void sortNumber(Customer[] customer, int from, int to) {
-        if(from < to){
-            for(int i = 0; i < customer.length; i++){
-                if(customer[i].numberCard > from && customer[i].numberCard < to){
+        if (from < to) {
+            for (int i = 0; i < customer.length; i++) {
+                if (customer[i].numberCard > from && customer[i].numberCard < to) {
                     System.out.println(customer[i].toString());
                 }
             }
