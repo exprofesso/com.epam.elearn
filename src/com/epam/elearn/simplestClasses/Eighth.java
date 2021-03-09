@@ -32,15 +32,17 @@ public class Eighth {
         customers[8] = new Customer(9, "Gogol", "Nilola", "", "Minsk, Pobedy 1-79", 235656745, 154);
         customers[9] = new Customer(10, "Tolstoi", "Lev", "", "Minsk, Tanka 1-345", 764635435, 71);
 
-//        for (int i = 0; i < customers.length; i++){
-//            System.out.println(customers[i].toString());
-//        }
-        System.out.println("**********");
 
+        System.out.println("**********");
+        // в заданом диапозоне
         Customer.sortNumber(customers, 400000000, 600000000);
-//        for (int i = 0; i < customers.length; i++){
-//            System.out.println(customers[i].toString());
-//        }
+
+        System.out.println("*********");
+        // портировка по фамилии
+        Customer.sortName(customers);
+        for (int i = 0; i < customers.length; i++) {
+            System.out.println(customers[i].toString());
+        }
 
     }
 }
@@ -139,10 +141,30 @@ class Customer {
                 ", numberAccount=" + numberAccount +
                 '}';
     }
-    public static void sortName(Customer[] customers){
-        
+
+    // создание сортировки по фамилиям
+
+    public static void sortName(Customer[] customers) {
+        Customer temp;
+        for (int i = 0; i < customers.length; i++) {
+            for (int j = customers.length - 1; j > i; j--) {
+                int sort = customers[i].surname.compareToIgnoreCase(customers[j].surname);
+                if (sort > 0) {
+                    temp = customers[i];
+                    customers[i] = customers[j];
+                    customers[j] = temp;
+                } else if (sort == 0) {
+                    if (customers[i].surname.compareToIgnoreCase(customers[j].surname) > 0) {
+                        temp = customers[i];
+                        customers[i] = customers[j];
+                        customers[j] = temp;
+                    }
+                }
+            }
+        }
     }
 
+    // создание сортировки в заданом диапозоне
 
     public static void sortNumber(Customer[] customer, int from, int to) {
         if (from < to) {
