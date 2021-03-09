@@ -48,13 +48,13 @@ public class Eighth {
 }
 
 class Customer {
-    int id;
-    String surname;
-    String name;
-    String patronymic;
-    String address;
-    int numberCard;
-    int numberAccount;
+    private int id;
+    private String surname;
+    private String name;
+    private String patronymic;
+    private String address;
+    private int numberCard;
+    private int numberAccount;
 
     public Customer(int id, String surname, String name, int numberAccount) {
         this.id = id;
