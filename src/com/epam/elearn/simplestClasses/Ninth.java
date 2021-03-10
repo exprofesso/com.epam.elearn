@@ -33,6 +33,14 @@ public class Ninth {
         books[8] = new Book(9, "Gomer", "Star", 1981, 358, 57, "hard");
         books[9] = new Book(10, "Gomer", "Star", 1994, 222, 57, "hard");
 
+        Book.findAuthor(books, "gomer");
+        System.out.println("************");
+        Book.findAuthor(books, "Tolstoi");
+        System.out.println("************");
+        Book.findPublisher(books, "Star");
+        System.out.println("*************");
+        Book.findPublisher(books, "hope");
+
 
     }
 }
@@ -129,12 +137,28 @@ class Book {
     }
 
     public static void findAuthor(Book[] books, String author) {
+        int count = 0;
         for (int i = 0; i < books.length; i++) {
             if (books[i].author.equalsIgnoreCase(author)) {
                 System.out.println(books[i]);
-            } else {
-                System.out.println("данного автора увы нет ");
+                count++;
             }
+        }
+        if (count == 0) {
+            System.out.println("Увы данного автора нет ");
+        }
+    }
+
+    public static void findPublisher(Book[] books, String publisher) {
+        int count = 0;
+        for (int i = 0; i < books.length; i++) {
+            if (books[i].publisher.equalsIgnoreCase(publisher)) {
+                System.out.println(books[i].toString());
+                count++;
+            }
+        }
+        if (count == 0) {
+            System.out.println("Данного издания не существует ");
         }
     }
 }
