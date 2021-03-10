@@ -131,15 +131,14 @@ class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", surname='" + surname + '\'' +
-                ", name='" + name + '\'' +
-                ", patronymic='" + patronymic + '\'' +
-                ", address='" + address + '\'' +
-                ", numberCard='" + numberCard + '\'' +
-                ", numberAccount=" + numberAccount +
-                '}';
+        return "Customer = " +
+                "id " + id +
+                ", surname " + surname +
+                ", name  " + name +
+                ", patronymic " + patronymic +
+                ", address " + address +
+                ", numberCard " + numberCard +
+                ", numberAccount " + numberAccount;
     }
 
     // создание сортировки по фамилиям
