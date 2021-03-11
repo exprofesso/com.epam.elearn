@@ -33,14 +33,19 @@ public class Ninth {
         books[8] = new Book(9, "Gomer", "Star", 1981, 358, 57, "hard");
         books[9] = new Book(10, "Gomer", "Star", 1994, 222, 57, "hard");
 
+        // a) список книг заданного автора;
         Book.findAuthor(books, "gomer");
         System.out.println("************");
         Book.findAuthor(books, "Tolstoi");
         System.out.println("************");
+
+        // b) список книг, выпущенных заданным издательством;
         Book.findPublisher(books, "Star");
         System.out.println("*************");
         Book.findPublisher(books, "hope");
         System.out.println("**************");
+
+        // c) список книг, выпущенных после заданного года.
         Book.moreAge(books, 2000);
         System.out.println("**************");
         Book.moreAge(books, 2021);
@@ -140,6 +145,9 @@ class Book {
                 '}';
     }
 
+
+    // a) список книг заданного автора;
+
     public static void findAuthor(Book[] books, String author) {
         int count = 0;
         for (int i = 0; i < books.length; i++) {
@@ -153,6 +161,8 @@ class Book {
         }
     }
 
+    // b) список книг, выпущенных заданным издательством;
+
     public static void findPublisher(Book[] books, String publisher) {
         int count = 0;
         for (int i = 0; i < books.length; i++) {
@@ -165,6 +175,8 @@ class Book {
             System.out.println("Данного издания не существует ");
         }
     }
+
+    // c) список книг, выпущенных после заданного года.
 
     public static void moreAge(Book[] books, int age) {
         int count = 0;
