@@ -40,6 +40,10 @@ public class Ninth {
         Book.findPublisher(books, "Star");
         System.out.println("*************");
         Book.findPublisher(books, "hope");
+        System.out.println("**************");
+        Book.moreAge(books, 2000);
+        System.out.println("**************");
+        Book.moreAge(books, 2021);
 
 
     }
@@ -159,6 +163,19 @@ class Book {
         }
         if (count == 0) {
             System.out.println("Данного издания не существует ");
+        }
+    }
+
+    public static void moreAge(Book[] books, int age) {
+        int count = 0;
+        for (int i = 0; i < books.length; i++) {
+            if (books[i].age > age) {
+                System.out.println(books[i].toString());
+                count++;
+            }
+        }
+        if (count == 0) {
+            System.out.println("Книг выданных после этого года нет");
         }
     }
 }
