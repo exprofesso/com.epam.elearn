@@ -92,5 +92,20 @@ class Airline {
                 ", dayWeek='" + dayWeek + '\'' +
                 '}';
     }
-    
+
+
+    //    a) список рейсов для заданного пункта назначения;
+    public static void toDestination (Airline[] airlines, String destination){
+        int count = 0;
+        for (int i = 0; i < airlines.length; i++){
+            if(airlines[i].destination.equalsIgnoreCase(destination)){
+                System.out.println(airlines[i].toString());
+                count++;
+            }
+        } if(count == 0){
+            System.out.println("Не летят туда сегодня самолеты и не едут поезда!");
+        }
+
+
+    }
 }
