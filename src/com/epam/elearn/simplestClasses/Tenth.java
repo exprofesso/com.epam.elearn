@@ -142,4 +142,54 @@ class Airline {
         }
     }
 
+    // c) список рейсов для заданного дня недели, время вылета для которых больше заданного.
+    public static void dayWeekDeparture(Airline[] airlines, String dayWeek, Date departure) {
+
+        Airline[] temp = new Airline[];
+        int count = 0;
+        String dW = dayWeek.trim().toLowerCase();
+        for (int i = 0; i < airlines.length; i++) {
+            switch (dW) {
+                case "monday":
+                    temp[count] = airlines[i];
+                    count++;
+                    break;
+                case "tuesday":
+                    temp[count] = airlines[i];
+                    count++;
+                    break;
+                case "wednesday":
+                    temp[count] = airlines[i];
+                    count++;
+                    break;
+                case "thursday":
+                    temp[count] = airlines[i];
+                    count++;
+                    break;
+                case "friday":
+                    temp[count] = airlines[i];
+                    count++;
+                    break;
+                case "saturday":
+                    temp[count] = airlines[i];
+                    count++;
+                    break;
+                case "sunday":
+                    temp[count] = airlines[i];
+                    count++;
+                    break;
+                default:
+                    System.out.println("Данного дня не существует");
+                    break;
+            }
+        }
+        for (int j = 0; j < temp.length; j++) {
+            int sort = temp[j].departure.compareTo(departure);
+            if (sort > 0) {
+                System.out.println(temp[j].toString());
+            }
+        }
+
+    }
+
 }
