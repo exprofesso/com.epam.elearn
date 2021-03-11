@@ -95,17 +95,51 @@ class Airline {
 
 
     //    a) список рейсов для заданного пункта назначения;
-    public static void toDestination (Airline[] airlines, String destination){
+    public static void toDestination(Airline[] airlines, String destination) {
         int count = 0;
-        for (int i = 0; i < airlines.length; i++){
-            if(airlines[i].destination.equalsIgnoreCase(destination)){
+        for (int i = 0; i < airlines.length; i++) {
+            if (airlines[i].destination.equalsIgnoreCase(destination)) {
                 System.out.println(airlines[i].toString());
                 count++;
             }
-        } if(count == 0){
+        }
+        if (count == 0) {
             System.out.println("Не летят туда сегодня самолеты и не едут поезда!");
         }
-
-
     }
+
+    // b) список рейсов для заданного дня недели;
+
+    public static void dayWeek(Airline[] airlines, String dayWeek) {
+        String dW = dayWeek.trim().toLowerCase();
+        for (int i = 0; i < airlines.length; i++) {
+            switch (dW) {
+                case "monday":
+                    System.out.println(airlines[i].toString());
+                    break;
+                case "tuesday":
+                    System.out.println(airlines[i].toString());
+                    break;
+                case "wednesday":
+                    System.out.println(airlines[i].toString());
+                    break;
+                case "thursday":
+                    System.out.println(airlines[i].toString());
+                    break;
+                case "friday":
+                    System.out.println(airlines[i].toString());
+                    break;
+                case "saturday":
+                    System.out.println(airlines[i].toString());
+                    break;
+                case "sunday":
+                    System.out.println(airlines[i].toString());
+                    break;
+                default:
+                    System.out.println("Данного дня не существует");
+                    break;
+            }
+        }
+    }
+
 }
