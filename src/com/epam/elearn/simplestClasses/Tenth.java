@@ -23,8 +23,28 @@ public class Tenth {
 
     public static void main(String[] args) {
         Airline[] airlines = new Airline[10];
-        airlines[0] = new Airline("Moscow", 10, "big", new Date(1212121212121L), "Monday");
+        airlines[0] = new Airline("Moscow", 10, "big", new Date(1516161616141L), "Monday");
+        airlines[1] = new Airline("Kiev", 15, "little", new Date(1212151616141L), "Friday");
+        airlines[2] = new Airline("Riga", 21, "little", new Date(1313141616141L), "Friday");
+        airlines[3] = new Airline("Moscow", 11, "little", new Date(1616131616141L), "Friday");
+        airlines[4] = new Airline("Kiev", 16, "little", new Date(1616111216141L), "Monday");
+        airlines[5] = new Airline("Riga", 37, "big", new Date(1616121611141L), "Monday");
+        airlines[6] = new Airline("Riga", 54, "little", new Date(1616101316141L), "Friday");
+        airlines[7] = new Airline("Kiev", 34, "little", new Date(1616151716141L), "Monday");
+        airlines[8] = new Airline("Kiev", 19, "big", new Date(1613161016141L), "Friday");
+        airlines[9] = new Airline("Riga", 14, "little", new Date(1613141016141L), "Monday");
 
+
+        // a) список рейсов для заданного пункта назначения;
+        Airline.toDestination(airlines, "riga");
+        System.out.println("*************");
+
+        // b) список рейсов для заданного дня недели;
+        Airline.dayWeek(airlines, "monday");
+        System.out.println("**************");
+
+        // c) список рейсов для заданного дня недели, время вылета для которых больше заданного.
+        Airline.dayWeekDeparture(airlines, "friday", new Date(1212151616141L));
 
     }
 }
@@ -112,38 +132,13 @@ class Airline {
     }
 
 
-
-
     // b) список рейсов для заданного дня недели;
 
     public static void dayWeek(Airline[] airlines, String dayWeek) {
         String dW = dayWeek.trim().toLowerCase();
         for (int i = 0; i < airlines.length; i++) {
-            switch (dW) {
-                case "monday":
-                    System.out.println(airlines[i].toString());
-                    break;
-                case "tuesday":
-                    System.out.println(airlines[i].toString());
-                    break;
-                case "wednesday":
-                    System.out.println(airlines[i].toString());
-                    break;
-                case "thursday":
-                    System.out.println(airlines[i].toString());
-                    break;
-                case "friday":
-                    System.out.println(airlines[i].toString());
-                    break;
-                case "saturday":
-                    System.out.println(airlines[i].toString());
-                    break;
-                case "sunday":
-                    System.out.println(airlines[i].toString());
-                    break;
-                default:
-                    System.out.println("Данного дня не существует");
-                    break;
+            if (airlines[i].dayWeek.equalsIgnoreCase(dayWeek)) {
+                System.out.println(airlines[i].toString());
             }
         }
     }
@@ -155,41 +150,12 @@ class Airline {
         int count = 0;
         String dW = dayWeek.trim().toLowerCase();
         for (int i = 0; i < airlines.length; i++) {
-            switch (dW) {
-                case "monday":
-                    temp[count] = airlines[i];
-                    count++;
-                    break;
-                case "tuesday":
-                    temp[count] = airlines[i];
-                    count++;
-                    break;
-                case "wednesday":
-                    temp[count] = airlines[i];
-                    count++;
-                    break;
-                case "thursday":
-                    temp[count] = airlines[i];
-                    count++;
-                    break;
-                case "friday":
-                    temp[count] = airlines[i];
-                    count++;
-                    break;
-                case "saturday":
-                    temp[count] = airlines[i];
-                    count++;
-                    break;
-                case "sunday":
-                    temp[count] = airlines[i];
-                    count++;
-                    break;
-                default:
-                    System.out.println("Данного дня не существует");
-                    break;
+            if (airlines[i].dayWeek.equalsIgnoreCase(dayWeek)) {
+                temp[count] = airlines[i];
+                count++;
             }
         }
-        for (int j = 0; j < temp.length; j++) {
+        for (int j = 0; j < count; j++) {
             int sort = temp[j].departure.compareTo(departure);
             if (sort > 0) {
                 System.out.println(temp[j].toString());
