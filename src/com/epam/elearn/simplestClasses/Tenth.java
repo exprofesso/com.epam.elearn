@@ -145,7 +145,7 @@ class Airline {
     // c) список рейсов для заданного дня недели, время вылета для которых больше заданного.
     public static void dayWeekDeparture(Airline[] airlines, String dayWeek, Date departure) {
 
-        Airline[] temp = new Airline[];
+        Airline[] temp = new Airline[airlines.length];
         int count = 0;
         String dW = dayWeek.trim().toLowerCase();
         for (int i = 0; i < airlines.length; i++) {
