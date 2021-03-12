@@ -22,6 +22,8 @@ import java.util.Date;
 public class Tenth {
 
     public static void main(String[] args) {
+        Airline[] airlines = new Airline[10];
+
 
     }
 }
@@ -108,6 +110,9 @@ class Airline {
         }
     }
 
+
+
+    
     // b) список рейсов для заданного дня недели;
 
     public static void dayWeek(Airline[] airlines, String dayWeek) {
