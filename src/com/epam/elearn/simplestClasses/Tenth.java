@@ -23,6 +23,7 @@ public class Tenth {
 
     public static void main(String[] args) {
         Airline[] airlines = new Airline[10];
+        airlines[0] = new Airline("Moscow", 10, "big", new Date(1212121212121L), "Monday");
 
 
     }
@@ -112,7 +113,7 @@ class Airline {
 
 
 
-    
+
     // b) список рейсов для заданного дня недели;
 
     public static void dayWeek(Airline[] airlines, String dayWeek) {
