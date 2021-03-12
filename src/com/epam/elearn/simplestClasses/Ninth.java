@@ -134,15 +134,14 @@ class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", author='" + author + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", age=" + age +
-                ", page=" + page +
-                ", price=" + price +
-                ", bindingType='" + bindingType + '\'' +
-                '}';
+        return "Book == " +
+                "id = " + id +
+                ", author = " + author +
+                ", publisher = " + publisher +
+                ", age = " + age +
+                ", page = " + page +
+                ", price = " + price +
+                ", bindingType = " + bindingType;
     }
 
 

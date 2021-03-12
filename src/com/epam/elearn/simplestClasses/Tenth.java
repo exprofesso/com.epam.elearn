@@ -107,13 +107,12 @@ class Airline {
 
     @Override
     public String toString() {
-        return "Airline{" +
-                "destination='" + destination + '\'' +
-                ", number=" + number +
-                ", type='" + type + '\'' +
-                ", departure=" + departure +
-                ", dayWeek='" + dayWeek + '\'' +
-                '}';
+        return "Airline = " +
+                "destination = " + destination +
+                ", number = " + number +
+                ", type = " + type +
+                ", departure = " + departure +
+                ", dayWeek = " + dayWeek;
     }
 
 
