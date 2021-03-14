@@ -25,6 +25,10 @@ public class Car {
         return wheels;
     }
 
+    public Wheel getWheelsId(int id) {
+        return wheels[id - 1];
+    }
+
     public void setWheels(Wheel wheel1, Wheel wheel2, Wheel wheel3, Wheel wheel4) {
         this.wheels = new Wheel[]{wheel1, wheel2, wheel3, wheel4};
     }
@@ -36,7 +40,7 @@ public class Car {
     public void changeWheel() {
         for (int i = 0; i < 4; i++) {
             if (!wheels[i].isQuality()) {
-                System.out.println("Коллесо номер " + i + 1 + " нужно заменить!");
+                System.out.println("нужно заменить колесо номер " + i + 1);
                 int whereToChange = this.wheels[i].getDiameter();
                 this.wheels[i] = new Wheel(whereToChange);
             }
@@ -58,7 +62,7 @@ public class Car {
         boolean isEngine = false;
 
         for (int i = 0; i < 4; i++) {
-            if (wheels != null) {
+            if (wheels[i] != null) {
                 count++;
             }
         }
@@ -78,17 +82,17 @@ public class Car {
         } else {
             isEngine = true;
         }
-        if (count == 4 && isEngine) {
+        if (isEngine && count == 4) {
             boolean ready = true;
             for (int i = 0; i < 4; i++) {
                 if (!wheels[i].isQuality()) {
-                    System.out.println("С колесом что то не то");
+                    System.out.println("нужно заменить колесо номер " + (i + 1));
                     ready = false;
                 }
             }
             if (!isFuel) {
                 System.out.println("Этому пепелацу нужна гравицапа");
-            } else {
+            } else if (ready) {
                 System.out.println("Все отлично, поехали!!!!!!");
             }
         }
