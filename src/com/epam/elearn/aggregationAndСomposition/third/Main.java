@@ -6,6 +6,9 @@ package com.epam.elearn.aggregationAndСomposition.third;
  */
 
 public class Main {
+
+
+
     public static void main(String[] args) {
         System.out.println("Capital");
     }
