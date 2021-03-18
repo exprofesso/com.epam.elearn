@@ -1,13 +1,11 @@
 package com.epam.elearn.aggregationAndСomposition.third;
 
 public class Region {
-    private int id;
     private String nameRegion;
     private int area;
     private Town town;
 
-    public Region(int id, String nameRegion, int area, Town town){
-        this.id = id;
+    public Region(String nameRegion, int area, Town town){
         this.nameRegion = nameRegion;
         this.area = area;
         this.town = town;
@@ -35,13 +33,5 @@ public class Region {
 
     public void setTown(Town town) {
         this.town = town;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }

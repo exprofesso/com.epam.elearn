@@ -16,4 +16,18 @@ public class Сountry {
     public void capitalToString (){
         capital.toString();
     }
+
+    //  вывод в консоль колличество регионов
+    public void countRegion(){
+        System.out.println("Колличество областей в данной стране  " + region.length);
+    }
+    //  вывод в консоль территории страны
+    public void areaCountry(){
+        int area = 0;
+        for (int i = 0; i < region.length; i++){
+            area += region[i].getArea();
+        }
+        System.out.println("Площадь страны равна " + area);
+    }
+
 }
