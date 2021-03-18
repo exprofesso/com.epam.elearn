@@ -4,7 +4,7 @@ public class Town {
     private String name;
     private int population;
 
-    public Town(String name, int population){
+    public Town(String name, int population) {
         this.name = name;
         this.population = population;
     }
@@ -25,8 +25,8 @@ public class Town {
         this.population = population;
     }
 
-    public String toString(){
+    public String toString() {
         //return "Name - " + this.name + " population - " + this.population;
-        return  name;
+        return name;
     }
 }

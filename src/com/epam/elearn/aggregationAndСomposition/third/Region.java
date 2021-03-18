@@ -5,7 +5,7 @@ public class Region {
     private int area;
     private Town town;
 
-    public Region(String nameRegion, int area, Town town){
+    public Region(String nameRegion, int area, Town town) {
         this.nameRegion = nameRegion;
         this.area = area;
         this.town = town;
