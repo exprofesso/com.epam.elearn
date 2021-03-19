@@ -21,7 +21,7 @@ public class Client {
         for (int i = 0; i < accounts.size(); i++) {
             balance += accounts.get(i).getBalance();
         }
-        return String.format("Баланс всех считов в банке " + balance);
+        return String.format("Баланс всех счетов у клиента " + balance);
     }
 
     public String getPositiveBalance() {
@@ -31,7 +31,7 @@ public class Client {
                 balance += accounts.get(i).getBalance();
             }
         }
-        return String.format("Баланс положительных считов в банке " + balance);
+        return String.format("Баланс положительных счетов у клиента " + balance);
     }
 
     public String getNegativeBalance() {
@@ -41,7 +41,7 @@ public class Client {
                 balance -= accounts.get(i).getBalance();
             }
         }
-        return String.format("Баланс отрицательных считов в банке " + balance);
+        return String.format("Баланс отрицательных счетов у клиента " + balance);
     }
 
     public void sortBalance() {
