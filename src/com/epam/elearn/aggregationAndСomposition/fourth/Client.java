@@ -88,4 +88,33 @@ public class Client {
     public String getPassID() {
         return passID;
     }
+
+    public void setPassID(String passID) {
+        this.passID = passID;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getSecond() {
+        return second;
+    }
+
+    public void setSecond(String second) {
+        this.second = second;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "firstName='" + firstName + '\'' +
+                ", second='" + second + '\'' +
+                ", passID='" + passID + '\'' +
+                '}';
+    }
 }
