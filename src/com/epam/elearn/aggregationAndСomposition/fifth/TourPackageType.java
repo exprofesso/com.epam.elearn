@@ -1,15 +1,13 @@
 package com.epam.elearn.aggregationAndСomposition.fifth;
 
-public enum Transport {
-    CAR,
-    BUS,
-    TRAIN,
-    SHIP,
-    PLANE,
-    BOOSTER;
+public enum  TourPackageType {
+    SCIENTIFIC,
+    FITNESS,
+    SHOPPING,
+    EXCURSION,
+    CRUISE;
 
     public String toString(){
         return super.toString().toLowerCase();
     }
-
 }
