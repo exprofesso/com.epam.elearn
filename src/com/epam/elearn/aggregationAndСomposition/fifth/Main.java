@@ -8,4 +8,11 @@ package com.epam.elearn.aggregationAndСomposition.fifth;
  */
 
 public class Main {
+    public static void main(String[] args) {
+        ToureConstructor pegas = new ToureConstructor("Pegas");
+
+        Client sergey = new Client("Sergey", 5680);
+
+        pegas.addTourePackade(new TourePackage("USA", "NY", TourPackageType.SHOPPING, Transport.PLANE, Food.NOT_FOOT, 14, 2579));
+    }
 }

@@ -5,11 +5,11 @@ public class Client {
     private int prepay;
     private TourePackage tourePackage;
 
-    public Client(String name, int prepay, TourePackage tourePackage) {
+    public Client(String name, int prepay) {
         this.name = name;
         this.prepay = prepay;
-        this.tourePackage = tourePackage;
     }
+
 
     public String getName() {
         return name;
