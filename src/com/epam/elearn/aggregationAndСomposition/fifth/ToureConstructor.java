@@ -24,7 +24,7 @@ public class ToureConstructor {
         tourePackages.add(tourePackage);
     }
 
-    ArrayList<TourePackage> selectByTourePackege(TourePackage tourePackage) {
+    ArrayList<TourePackage> selectByTourePackege(TourPackageType tourePackage) {
         ArrayList<TourePackage> tourePackages = new ArrayList<>();
         for (TourePackage tour : tourePackages) {
             if (tour.getTourPackageType().equals(tourePackage)) {
@@ -87,7 +87,7 @@ public class ToureConstructor {
         tourePackages.sort(Comparator.comparing(TourePackage::getPrice));
     }
 
-    static void SortByPrice(ArrayList<TourePackage> tour) {
+    static void sortByPrice(ArrayList<TourePackage> tour) {
         tour.sort(Comparator.comparing(TourePackage::getPrice));
     }
 
