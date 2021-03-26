@@ -46,10 +46,10 @@ public class Main {
 
 
 
-        System.out.println("Выбрать те что на коробле ");
-        ArrayList<TourePackage> selectByOption = pegas.selectMoreTransport(Transport.SHIP);
-        ToureConstructor.SortNumberOfDay(selectByOption);
-        ToureConstructor.printListTourePackage(selectByOption);
+//        System.out.println("Выбрать те что на коробле ");
+//        ArrayList<TourePackage> selectByOption = pegas.selectMoreTransport(Transport.SHIP);
+//        ToureConstructor.SortNumberOfDay(selectByOption);
+//        ToureConstructor.printListTourePackage(selectByOption);
 //
 //        System.out.println("Выбрать путевки где поездка на автобусе, все включено и 8 дней");
 //        selectByOption = pegas.selectMoreTransport(Transport.BUS, Food.ALL_INCLUSIVE, 6);
@@ -61,7 +61,7 @@ public class Main {
 //        ToureConstructor.sortByPrice(selectByOption);
 //        ToureConstructor.printListTourePackage(selectByOption);
 
-        pegas.addClients(sergey, selectByOption.get(0));
+ //       pegas.addClients(sergey, selectByOption.get(0));
 
 
 

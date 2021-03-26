@@ -65,14 +65,15 @@ public class ToureConstructor {
     }
 
     static void printListTourePackage(ArrayList<TourePackage> tourePackages) {
-        if (tourePackages.size() > 1) {
-            for (TourePackage tour : tourePackages) {
-                System.out.println(tour.getCountry() + " " + tour.getTour() + " " + tour.getTransport() + " "
-                        + tour.getFood() + " " + tour.getNumberOfDay() + " " + tour.getPrice());
-            }
-        } else {
+        if (tourePackages.size() == 0) {
             System.out.println("Простите, но туров не найдено");
+            return;
         }
+        for (TourePackage tour : tourePackages) {
+            System.out.println(tour.getCountry() + " " + tour.getTour() + " " + tour.getTransport() + " "
+                    + tour.getFood() + " " + tour.getNumberOfDay() + " " + tour.getPrice());
+        }
+
     }
 
     void SortNumberOfDay() {
