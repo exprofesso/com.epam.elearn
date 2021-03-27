@@ -5,7 +5,7 @@ public enum Food {
     BREAKFAST,
     ALL_INCLUSIVE;
 
-    public String toString(){
+    public String toString() {
         return super.toString().toLowerCase();
     }
 }

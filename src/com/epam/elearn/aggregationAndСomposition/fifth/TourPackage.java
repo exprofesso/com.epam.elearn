@@ -1,6 +1,6 @@
 package com.epam.elearn.aggregationAndСomposition.fifth;
 
-public class TourePackage {
+public class TourPackage {
     private String country;
     private String tour;
     private TourPackageType tourPackageType;
@@ -9,7 +9,7 @@ public class TourePackage {
     private int numberOfDay;
     private int price;
 
-    public TourePackage(String country, String tour, TourPackageType tourPackageType, Transport transport, Food food, int numberOfDay, int price) {
+    public TourPackage(String country, String tour, TourPackageType tourPackageType, Transport transport, Food food, int numberOfDay, int price) {
         this.country = country;
         this.tour = tour;
         this.tourPackageType = tourPackageType;

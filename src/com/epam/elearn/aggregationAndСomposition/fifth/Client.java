@@ -3,7 +3,7 @@ package com.epam.elearn.aggregationAndСomposition.fifth;
 public class Client {
     private String name;
     private int prepay;
-    private TourePackage tourePackage;
+    private TourPackage tourPackage;
 
     public Client(String name, int prepay) {
         this.name = name;
@@ -27,11 +27,11 @@ public class Client {
         this.prepay = prepay;
     }
 
-    public TourePackage getTourePackage() {
-        return tourePackage;
+    public TourPackage getTourPackage() {
+        return tourPackage;
     }
 
-    public void setTourePackage(TourePackage tourePackage) {
-        this.tourePackage = tourePackage;
+    public void setTourPackage(TourPackage tourPackage) {
+        this.tourPackage = tourPackage;
     }
 }

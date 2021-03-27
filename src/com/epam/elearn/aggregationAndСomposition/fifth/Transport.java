@@ -8,7 +8,7 @@ public enum Transport {
     PLANE,
     BOOSTER;
 
-    public String toString(){
+    public String toString() {
         return super.toString().toLowerCase();
     }
 
