@@ -24,6 +24,7 @@ public class TourConstructor {
         client.setTourPackage(tourPackage);
     }
 
+    // выборка по типу путевки
     ArrayList<TourPackage> selectByTourPackege(TourPackageType type) {
         ArrayList<TourPackage> temp = new ArrayList<>();
         for (TourPackage tour : tourPackages) {
@@ -34,6 +35,7 @@ public class TourConstructor {
         return temp;
     }
 
+    // выборка по типу транспорта
     ArrayList<TourPackage> selectMoreTransport(Transport transport) {
         ArrayList<TourPackage> temp = new ArrayList<>();
         for (TourPackage tour : tourPackages) {
@@ -44,6 +46,7 @@ public class TourConstructor {
         return temp;
     }
 
+    // выборка по колличеству дней
     ArrayList<TourPackage> selectMoreTransport(int date) {
         ArrayList<TourPackage> temp = new ArrayList<>();
         for (TourPackage tour : tourPackages) {
@@ -54,6 +57,7 @@ public class TourConstructor {
         return temp;
     }
 
+    // выборка по типу транспорта, типу еды и колличеству дней
     ArrayList<TourPackage> selectMoreTransport(Transport transport, Food food, int days) {
         ArrayList<TourPackage> temp = new ArrayList<>();
         for (TourPackage tour : tourPackages) {
@@ -76,6 +80,7 @@ public class TourConstructor {
 
     }
 
+    // сортировка по колличеству дней
     void SortNumberOfDay() {
         tourPackages.sort(Comparator.comparing(TourPackage::getNumberOfDay));
     }
@@ -84,6 +89,7 @@ public class TourConstructor {
         tour.sort(Comparator.comparing(TourPackage::getNumberOfDay));
     }
 
+    // сортировка по цене
     void SortByPrice() {
         tourPackages.sort(Comparator.comparing(TourPackage::getPrice));
     }
