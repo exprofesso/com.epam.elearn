@@ -7,4 +7,12 @@ package com.epam.elearn.basicsOfOop.first;
 
 
 public class Main {
+    public static void main(String[] args) {
+        Directory directory = new Directory("Java OOP");
+        String nameFile = "Spring in began";
+        TextFile textFile = new TextFile(nameFile, directory);
+        String text = "Весна наполнила весь мир очарованием";
+        textFile.addText(text);
+        textFile.printContent();
+    }
 }

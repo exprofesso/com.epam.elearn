@@ -12,9 +12,12 @@ public class TextFile extends File {
     public void addText(String text){
         content.addText(text);
     }
+    public void printContent(){
+        System.out.println(content.getText());
+    }
 
     @Override
     public void changeName(String nameFile) {
-
+        this.setNameFile(nameFile);
     }
 }

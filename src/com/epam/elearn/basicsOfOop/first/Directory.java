@@ -24,9 +24,9 @@ public class Directory {
     public void addFile(TextFile textFile){
         this.files.add(textFile);
     }
-    public void deleteFile(TextFile textFile){
+    public void deleteFile(String textFile){
         for (int i = 0; i < files.size(); i++){
-            if(files.get(i)getFileName().equalsIgnoreCase(textFile)){
+            if(files.get(i).getNameFile().equalsIgnoreCase(textFile)){
                 files.remove(i);
             }
         }
