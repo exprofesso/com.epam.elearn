@@ -13,8 +13,6 @@ public class Text {
 
     public void addText(String text) {
         StringBuilder reader = new StringBuilder(new StringBuilder(this.text));
-        reader.append(' ');
-        reader.append(text);
-        this.text = reader.append(text).toString();
+        this.text = reader.append(text).append(' ').toString();
     }
 }
