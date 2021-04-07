@@ -15,7 +15,7 @@ public class Payment {
         int temp = (int) receipt.getBalance() * 100;
         balance = (double) temp / 100;
         System.out.println(receipt.getBalance());
-        System.out.println(balance);
+        // System.out.println(balance);
     }
 
     public void getPayment(double deposit) {
@@ -24,12 +24,12 @@ public class Payment {
             double temp = deposit - balance;
             System.out.println("Ваши изменения  " + temp);
         } else if (balance == deposit) {
-            System.out.println("" + deposit);
+            System.out.println("Ваш платеж " + deposit);
             System.out.println("Большое спасибо что без сдачи");
         } else {
             System.out.println("Ваш платеж " + deposit);
             balance -= deposit;
-            System.out.println("Ваш баланс " + balance);
+            System.out.println("Ваш баланс остался " + balance);
         }
 
     }
