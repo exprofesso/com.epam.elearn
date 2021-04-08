@@ -20,14 +20,14 @@ public class Payment {
 
     public void getPayment(double deposit) {
         if (balance < deposit) {
-            System.out.println("Ваш платеж " + deposit);
+            System.out.println("Ваш платеж " + deposit + " руб");
             double temp = deposit - balance;
             System.out.println("Ваши изменения  " + temp);
         } else if (balance == deposit) {
-            System.out.println("Ваш платеж " + deposit);
+            System.out.println("Ваш платеж " + deposit + " руб");
             System.out.println("Большое спасибо что без сдачи");
         } else {
-            System.out.println("Ваш платеж " + deposit);
+            System.out.println("Ваш платеж " + deposit + " руб");
             balance -= deposit;
             System.out.println("Ваш баланс остался " + balance);
         }
