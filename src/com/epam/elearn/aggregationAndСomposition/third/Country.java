@@ -33,6 +33,16 @@ public class Country {
         System.out.println("Площадь страны равна " + area);
     }
 
+    //   вывод на консоль населения страны
+    public void countryPopulation() {
+        int population = 0;
+        for (int i = 0; i < regions.size(); i++) {
+            population += regions.get(i).PopulationRegion();
+        }
+        System.out.println("Население страны " + population);
+    }
+
+
     // вывод на консоль колличество областей
     public void regionCentre() {
         for (int i = 0; i < regions.size(); i++) {
