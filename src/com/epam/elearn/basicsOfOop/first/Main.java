@@ -10,10 +10,8 @@ public class Main {
     public static void main(String[] args) {
         Directory directory = new Directory("Java OOP");
 
-        // создание имени
-        String nameFile = "Spring in began";
 
-        TextFile textFile = new TextFile(nameFile, directory);
+        TextFile textFile = new TextFile("Spring in began", directory);
         String text = "Весна наполнила весь мир очарованием";
 
         // добавление текста
@@ -22,7 +20,7 @@ public class Main {
         textFile.printContent();
 
         // Изменить имя
-        textFile.changeName("Spring in began tomorrow");
+//        textFile.changeName("Spring in began tomorrow");
         System.out.println("Новое имя файла " + textFile.getNameFile());
 
         String text1 = "Цветов и красок буйный карнавал.";

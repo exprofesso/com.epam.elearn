@@ -1,22 +1,22 @@
 package com.epam.elearn.basicsOfOop.first;
 
 abstract class File {
-    private String nameFile;
+    private final String NAMEFILE;
     private Directory directory;
 
-    public File(String nameFile, Directory directory) {
-        this.nameFile = nameFile;
+    public File(String NAMEFILE, Directory directory) {
+        this.NAMEFILE = NAMEFILE;
         this.directory = directory;
     }
 
 
     public String getNameFile() {
-        return nameFile;
+        return NAMEFILE;
     }
 
-    public void setNameFile(String nameFile) {
-        this.nameFile = nameFile;
-    }
+//    public void setNameFile(String nameFile) {
+//        this.nameFile = nameFile;
+//    }
 
     public Directory getDirectory() {
         return directory;
@@ -29,8 +29,8 @@ abstract class File {
     @Override
     public String toString() {
         return "File " +
-                " nameFile = '" + nameFile + '\'' +
+                " nameFile = '" + NAMEFILE + '\'' +
                 ", directory = " + directory;
     }
-    abstract public void changeName(String nameFile);
+//    abstract public void changeName(String nameFile);
 }

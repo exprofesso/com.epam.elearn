@@ -4,8 +4,8 @@ public class TextFile extends File {
 
     public Text content;
 
-    public TextFile(String nameFile, Directory directory) {
-        super(nameFile, directory);
+    public TextFile(String NAMEFILE, Directory directory) {
+        super(NAMEFILE, directory);
         content = new Text("");
         super.getDirectory().addFile(this);
     }
@@ -16,8 +16,8 @@ public class TextFile extends File {
         System.out.println(content.getText());
     }
 
-    @Override
-    public void changeName(String nameFile) {
-        this.setNameFile(nameFile);
-    }
+//    @Override
+////    public void changeName(String nameFile) {
+////        this.setNameFile(nameFile);
+////    }
 }
