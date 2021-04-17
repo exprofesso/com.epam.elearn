@@ -5,26 +5,27 @@ package com.epam.elearn.arrayOfCharacters;
 public class Fourh {
 
     public static void main(String[] args) {
-        String example = "good 1day 25, 221but I like 35";
+        String example = "345jklrewjt 54983208.5438 43 55";
 
-        System.out.println(count(example));
+        System.out.println("Колличество чисел в строке " + count(example));
     }
 
     public static int count(String text) {
 
-        char[] numeral = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         boolean some = false;
         int count = 0;
+
         for (int i = 0; i < text.length(); i++) {
-            for (int j = 0; j < numeral.length; j++) {
-                if (text.charAt(i) == numeral[j] & !some) {
-                    count++;
-                    some = true;
-                } else if (text.charAt(i) == ' ') {
-                    some = false;
-                }
+
+            if ((text.charAt(i) > 47) & (text.charAt(i) < 58) && (!some)) {
+                count++;
+                some = true;
+            } else if ((text.charAt(i) < 47) || (text.charAt(i) > 58)) {
+                some = false;
             }
+
         }
         return count;
+
     }
 }
