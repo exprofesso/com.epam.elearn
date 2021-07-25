@@ -39,6 +39,7 @@ public class Main {
 
         pegas.addTourPackage(new TourPackage("Belarus", "Grodno", TourPackageType.FITNESS, Transport.BUS, Food.ALL_INCLUSIVE, 6, 59));
 
+        pegas.addTourPackage(new TourPackage("Belarus", "Vitebsk", TourPackageType.EXCURSION, Transport.CAR, Food.NOT_FOOT, 3, 99));
 
         System.out.println("Выбрать экскурсии");
         ArrayList<TourPackage> selectByType = pegas.selectByTourPackege(TourPackageType.EXCURSION);
