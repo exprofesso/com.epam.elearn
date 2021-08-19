@@ -20,6 +20,6 @@ public class Package {
 
     @Override
     public String toString() {
-        return "Упаковка " + name + " " + " ценв" + price;
+        return "Упаковка " + name + " " + " цена " + price;
     }
 }

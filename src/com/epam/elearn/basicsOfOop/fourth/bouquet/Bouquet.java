@@ -56,29 +56,67 @@ public class Bouquet {
 
     @Override
     public String toString() {
+        int countPrice = 0;
+        int countExpDate = 999;
+        ArrayList<String> flowerName = new ArrayList<>();
 
-
-        return "Bouquet{" +
-                "name='" + name + '\'' +
-                ", flowers=" + flowers +
-                ", aPackage=" + aPackage +
-                '}';
+        for (Flower flower : flowers) {
+            countPrice += flower.price;
+            flowerName.add(flower.name);
+            if (flower.expirationDate < countExpDate) {
+                countExpDate = flower.expirationDate;
+            }
+        }
+        return "Букет " + name + " состоящий из " + flowerName + " по цене " + countPrice + " руб." + " сроком хранения " + countExpDate + " дней";
     }
 
+    // подсчет цены букета из цветов и укаповки
     public void countBouqet() {
-        int count = 0;
+        int countPrice = 0;
         if (flowers.isEmpty()) {
             System.out.println("Вы еще ничего не добавили");
         } else {
 
             for (Flower flower : flowers) {
-                count += flower.getPrice();
+                countPrice += flower.getPrice();
             }
         }
         if (aPackage != null) {
-            count += aPackage.price;
+            countPrice += aPackage.price;
         }
+        System.out.println("Цена букета " + countPrice + " руб.");
+    }
 
-        System.out.println("Цена букета " + count);
+    // подсчет срока хранения
+    public void countExpirationDate() {
+        int countExpDate = 999;
+        for (Flower flower : flowers) {
+            if (flower.expirationDate < countExpDate) {
+                countExpDate = flower.expirationDate;
+            }
+        }
+        System.out.println("Срок хранения букета " + countExpDate + " дней");
+    }
+
+    // Подсчет храанения и цены
+    public void priceAndExpDate() {
+        int countPrice = 0;
+        int countExpDate = 999;
+
+        if (flowers.isEmpty()) {
+            System.out.println("Вы еще ничего не добавили");
+        } else {
+
+            for (Flower flower : flowers) {
+                countPrice += flower.getPrice();
+                if (flower.expirationDate < countExpDate) {
+                    countExpDate = flower.expirationDate;
+                }
+            }
+        }
+        if (aPackage != null) {
+            countPrice += aPackage.price;
+        }
+        System.out.println("Цена букета " + countPrice + " руб. " + "Срок хранения букета " + countExpDate + " дней");
     }
 }
