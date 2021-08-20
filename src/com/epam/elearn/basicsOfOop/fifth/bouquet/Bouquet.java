@@ -1,4 +1,4 @@
-package com.epam.elearn.basicsOfOop.fourth.bouquet;
+package com.epam.elearn.basicsOfOop.fifth.bouquet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +58,9 @@ public class Bouquet {
     public String toString() {
         int countPrice = 0;
         int countExpDate = 999;
+        if (aPackage.price != 0) {
+            countPrice = +aPackage.price;
+        }
         ArrayList<String> flowerName = new ArrayList<>();
 
         for (Flower flower : flowers) {
