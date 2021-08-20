@@ -1,4 +1,4 @@
-package com.epam.elearn.basicsOfOop.fourth.bouquet;
+package com.epam.elearn.basicsOfOop.fifth.bouquet;
 
 public class Flower {
     String name;
@@ -23,6 +23,7 @@ public class Flower {
         } else {
             this.name = "Неизвестный";
         }
+        this.expirationDate = 3;
 
     }
 
@@ -37,6 +38,7 @@ public class Flower {
         } else {
             this.price = 10;
         }
+        this.expirationDate = 3;
     }
 
     public Flower(String name, int price, int expirationDate) {

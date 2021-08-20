@@ -1,4 +1,4 @@
-package com.epam.elearn.basicsOfOop.fourth.bouquet;
+package com.epam.elearn.basicsOfOop.fifth.bouquet;
 
 public class Package {
     String name;
