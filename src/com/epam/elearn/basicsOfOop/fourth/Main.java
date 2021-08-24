@@ -1,5 +1,7 @@
 package com.epam.elearn.basicsOfOop.fourth;
 
+import com.epam.elearn.basicsOfOop.fourth.cave.Cave;
+
 /*
 Дракон и его сокровища.
 Создать программу, позволяющую обрабатывать сведения о 100 сокровищах в пещере дракона.
@@ -9,4 +11,12 @@ package com.epam.elearn.basicsOfOop.fourth;
 
  */
 public class Main {
+    public static void main(String[] args) {
+        Cave dragon = new Cave();
+
+
+        dragon.showTreasure();
+        System.out.println("**************");
+        dragon.mostExpensive();
+    }
 }
