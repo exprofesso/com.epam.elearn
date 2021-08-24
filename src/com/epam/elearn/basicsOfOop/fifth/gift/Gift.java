@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Gift {
-    String name;
-    List<Sweet> sweets = new ArrayList<>();
-    Package aPackage;
+    private String name;
+    private List<Sweet> sweets = new ArrayList<>();
+    private Package aPackage;
 
     public Gift(String name) {
         this.name = name;

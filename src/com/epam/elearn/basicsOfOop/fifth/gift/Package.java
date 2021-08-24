@@ -1,9 +1,9 @@
 package com.epam.elearn.basicsOfOop.fifth.gift;
 
 public class Package {
-    String name;
-    int size;
-    int price;
+    private String name;
+    private int size;
+    private int price;
 
     public Package() {
         this.name = "Пустота";

@@ -1,9 +1,9 @@
 package com.epam.elearn.basicsOfOop.fifth.bouquet;
 
 public class Flower {
-    String name;
-    int price;
-    int expirationDate;
+    private String name;
+    private int price;
+    private int expirationDate;
 
     public String getName() {
         return name;
@@ -62,5 +62,17 @@ public class Flower {
     @Override
     public String toString() {
         return "Цветок " + name + " " + "по цене = " + price + " руб., сроком годности " + expirationDate + " дней";
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setExpirationDate(int expirationDate) {
+        this.expirationDate = expirationDate;
     }
 }

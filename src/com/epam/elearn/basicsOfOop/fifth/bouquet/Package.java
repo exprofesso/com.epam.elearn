@@ -1,8 +1,8 @@
 package com.epam.elearn.basicsOfOop.fifth.bouquet;
 
 public class Package {
-    String name;
-    int price;
+    private String name;
+    private int price;
 
     public Package() {
         this.name = "Без упаковк";
@@ -21,5 +21,21 @@ public class Package {
     @Override
     public String toString() {
         return "Упаковка " + name + " " + " цена " + price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

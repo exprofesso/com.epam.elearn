@@ -1,9 +1,9 @@
 package com.epam.elearn.basicsOfOop.fifth.gift;
 
 public class Sweet {
-    String name;
-    int calories;
-    int price;
+    private String name;
+    private int calories;
+    private int price;
 
     public Sweet(String name) {
         if (name != null) {
