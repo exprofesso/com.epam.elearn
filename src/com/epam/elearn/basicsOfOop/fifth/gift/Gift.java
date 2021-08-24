@@ -47,12 +47,12 @@ public class Gift {
     public String toString() {
         int countCal = 0;
         int countPrice = 0;
-        if (aPackage.price > 0) {
-            countPrice += aPackage.price;
+        if (aPackage.getPrice() > 0) {
+            countPrice += aPackage.getPrice();
         }
         for (Sweet sweet : sweets) {
-            countCal += sweet.calories;
-            countPrice += sweet.price;
+            countCal += sweet.getCalories();
+            countPrice += sweet.getPrice();
         }
         return "Подарок '" + name + "' " + countCal + " Ккал. " + countPrice + "руб.";
     }
@@ -64,13 +64,13 @@ public class Gift {
         int countPrice = 0;
 
         for (Sweet sweet : sweets) {
-            countCal += sweet.calories;
-            countPrice += sweet.price;
-            System.out.println(sweet.name + " " + sweet.calories + "Ккал. " + sweet.price + "руб.");
+            countCal += sweet.getCalories();
+            countPrice += sweet.getPrice();
+            System.out.println(sweet.getName() + " " + sweet.getCalories() + "Ккал. " + sweet.getPrice() + "руб.");
         }
-        if (aPackage.price > 0) {
-            countPrice += aPackage.price;
-            System.out.println(aPackage.name + " " + aPackage.size + "см. " + aPackage.price + "руб.");
+        if (aPackage.getPrice() > 0) {
+            countPrice += aPackage.getPrice();
+            System.out.println(aPackage.getName() + " " + aPackage.getSize() + "см. " + aPackage.getSize() + "руб.");
         }
         System.out.println("Подарок '" + name + "' " + countCal + " Ккал. " + countPrice + "руб.");
     }
