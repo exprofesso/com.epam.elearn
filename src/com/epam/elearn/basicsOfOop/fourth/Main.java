@@ -13,10 +13,15 @@ import com.epam.elearn.basicsOfOop.fourth.cave.Cave;
 public class Main {
     public static void main(String[] args) {
         Cave dragon = new Cave();
-
-
         dragon.showTreasure();
-        System.out.println("**************");
+        System.out.println("****************");
         dragon.mostExpensive();
+        System.out.println("****************");
+
+        for (int i = 0; i < 1000; i++) {
+            Cave dragon1 = new Cave();
+            dragon1.collectForTheAmount(1000);
+        }
+
     }
 }

@@ -1,6 +1,8 @@
 package com.epam.elearn.basicsOfOop.fourth.treasure;
 
-public class Treasure {
+import java.util.Comparator;
+
+public class Treasure implements Comparator<Treasure> {
     private String name;
     private TreasureType treasureType;
     private TreasureMaterial treasureMaterial;
@@ -55,7 +57,7 @@ public class Treasure {
         this.treasureMaterial = treasureMaterial;
     }
 
-    public int getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
@@ -66,12 +68,16 @@ public class Treasure {
     @Override
     public String toString() {
         return "Treasure{" +
-                "name='" + name + '\'' +
-                ", treasureType=" + treasureType +
-                ", treasureMaterial=" + treasureMaterial +
-                ", price=" + price +
+                "name= '" + name + '\'' +
+                ", treasureType= " + treasureType +
+                ", treasureMaterial= " + treasureMaterial +
+                ", price= " + price +
                 '}';
     }
 
 
+    @Override
+    public int compare(Treasure o1, Treasure o2) {
+        return o1.getPrice().compareTo(o2.getPrice());
+    }
 }
