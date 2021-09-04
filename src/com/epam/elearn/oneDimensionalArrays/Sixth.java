@@ -26,10 +26,10 @@ public class Sixth {
 
     public static boolean isPrime(int x) {
         if (x < 2) return false;
-        int temp;
+        int remainder;
         for (int i = 2; i <= x / 2; i++) {
-            temp = x % i;
-            if (temp == 0) {
+            remainder = x % i;
+            if (remainder == 0) {
                 return false;
             }
         }

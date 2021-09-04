@@ -107,9 +107,9 @@ public class First {
 
         String[] sort = a.split("\n");
         for (int i = 0; i < sort.length; i++) {
-            String temp[] = splitSentences(sort[i]);
-            for (int j = 0; j < temp.length; j++) {
-                String[] words = splitLength(temp[j]);
+            String sentences[] = splitSentences(sort[i]);
+            for (int j = 0; j < sentences.length; j++) {
+                String[] words = splitLength(sentences[j]);
 
                 // сортировка слов
                 for (int z = words.length - 1; z >= 0; z--) {
@@ -137,9 +137,9 @@ public class First {
     public static void lexeme(String text, String letter) {
         String[] sort = text.split("\n");
         for (int i = 0; i < sort.length; i++) {
-            String temp[] = splitSentences(sort[i]);
-            for (int j = 0; j < temp.length; j++) {
-                String[] words = splitLength(temp[j]);
+            String sentences[] = splitSentences(sort[i]);
+            for (int j = 0; j < sentences.length; j++) {
+                String[] words = splitLength(sentences[j]);
 
                 for (int z = words.length - 1; z >= 0; z--) {
                     for (int y = 0; y < z; y++) {
