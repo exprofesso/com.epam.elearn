@@ -25,6 +25,8 @@ public class Second {
         int count = 0;
 
         System.out.println("Z = " + number);
+
+        System.out.println("Мвссив до изменений ");
         enterArrayRandom(array);
 
         for (int i = 0; i < array.length; i++) {
@@ -34,7 +36,11 @@ public class Second {
             }
         }
 
-        System.out.println("Количество замен: " + count);
+        System.out.println("Мaссив после заменны");
+        for (int arrays : array) {
+            System.out.print(arrays + " ");
+        }
+        System.out.println("\n Количество замен: " + count);
         System.out.println();
     }
 
