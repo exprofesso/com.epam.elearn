@@ -2,12 +2,21 @@ package com.epam.elearn.linearPrograms;
 
 // Вычислить значение выражения по формуле (все переменные принимают действительные значения):
 
+import java.util.Scanner;
+
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
 public class Second {
     public static void main(String[] args) {
-        System.out.println(discrim(5, 5, 5));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Укажите значение для A");
+        long a = (long) scanner.nextInt();
+        System.out.println("Укажите значение для B");
+        long b = (long) scanner.nextInt();
+        System.out.println("Укажите значение для C");
+        long c = (long) scanner.nextInt();
+        System.out.println(discrim(a, b, c));
     }
 
     public static double discrim(double a, double b, double c) {
