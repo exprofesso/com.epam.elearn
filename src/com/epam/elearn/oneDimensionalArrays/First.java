@@ -24,7 +24,7 @@ public class First {
                 sum += a;
             }
         }
-        System.out.println(sum);
+        System.out.println("Сумма равна " + sum);
     }
 
     private static int[] generateArray(int num) {
