@@ -9,7 +9,7 @@ public class Ninth {
 
     public static void main(String[] args) {
 
-        int mass[] = {4, 6, 2, 7, 8, 4, 11, 7, 11, 9, 2, 2};
+        int mass[] = {35, 1, 1, 1, 4, 6, 2, 7, 8, 4, 11, 7, 11, 9, 2, 2, 12, 12, 12, 57, 57, 57, 57, 57, 56, 56, 56, 56, 56, 35, 35, 35, 35};
         System.out.println(getMostPopularNumber(mass));
     }
 
