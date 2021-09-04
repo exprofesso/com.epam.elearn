@@ -20,7 +20,10 @@ public class Sixth {
                 sum += arr[i];
             }
         }
-        System.out.println("Summ: " + sum);
+        for (int arrays: arr) {
+            System.out.print(arrays + " ");
+        }
+        System.out.println("\n Summ: " + sum);
     }
 
 
