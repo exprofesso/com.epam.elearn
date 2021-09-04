@@ -23,6 +23,7 @@ public class Sixth {
         primeNumbers(streamSize, randomNumberOrigin, randomNumberBound);
     }
 
+    // генерация чисел
     public static void primeNumbers(int streamSize, int randomNumberOrigin, int randomNumberBound) {
         int[] arr = new Random().ints(streamSize, randomNumberOrigin, randomNumberBound).toArray();
         int sum = 0;
