@@ -13,7 +13,7 @@ public class Fifth {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Укажите символ");
         String character = scanner.nextLine();
-        int x = (char) character.charAt(0);
+        int x = character.charAt(0);
         System.out.println(character + " char index " + x);
     }
 }
