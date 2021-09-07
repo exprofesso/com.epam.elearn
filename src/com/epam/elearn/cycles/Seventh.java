@@ -21,9 +21,15 @@ public class Seventh {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Input first number:");
             a = Integer.parseInt(scanner.nextLine());
+            if (a <= 0) {
+                a = Math.abs(a);
+            }
 
             System.out.println("Input second number:");
             b = Integer.parseInt(scanner.nextLine());
+            if (b <= 0) {
+                b = Math.abs(b);
+            }
         } while ((a <= 0) && (b <= 0));
 
         while (a != 0) {
