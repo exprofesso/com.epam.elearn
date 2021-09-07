@@ -6,7 +6,7 @@ import static java.lang.Math.pow;
 public class Fifth {
 
     public static void main(String[] args) {
-        System.out.println(function(2));
+        System.out.println(function(3));
 
     }
 
@@ -14,7 +14,7 @@ public class Fifth {
         if (x <= 3) {
             return pow(x, 2) - 3 * x + 9;
         } else {
-            return 1 / (pow(x, 2) + 6);
+            return 1 / (pow(x, 3) + 6);
         }
     }
 }
