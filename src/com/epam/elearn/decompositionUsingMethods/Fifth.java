@@ -26,15 +26,29 @@ public class Fifth {
         System.out.println();
         Arrays.sort(array);
 
-        if (array[array.length - 2] != array[array.length - 1]) {
-            System.out.println(array[array.length - 2]);
-        } else {
-            for (int i = 2; array[array.length - i - 1] == array[array.length - i]; ) {
-                i++;
-                if (array[array.length - i - 1] != array[array.length - i])
-                    System.out.println(array[array.length - i - 1]);
+
+        int maxValue = array[0];
+        int secondMaxValue = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (maxValue < array[i]) {
+                secondMaxValue = maxValue;
+                maxValue = array[i];
             }
-            System.out.println();
+            if (secondMaxValue < array[i] && maxValue > array[i]) {
+                secondMaxValue = array[i];
+            }
         }
+        System.out.println(secondMaxValue);
+
+//        if (array[array.length - 2] != array[array.length - 1]) {
+//            System.out.println(array[array.length - 2]);
+//        } else {
+//            for (int i = 2; array[array.length - i - 1] == array[array.length - i]; ) {
+//                i++;
+//                if (array[array.length - i - 1] != array[array.length - i])
+//                    System.out.println(array[array.length - i - 1]);
+//            }
+//            System.out.println();
+//        }
     }
 }
