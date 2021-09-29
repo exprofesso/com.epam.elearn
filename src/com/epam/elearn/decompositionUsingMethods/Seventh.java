@@ -8,11 +8,10 @@ public class Seventh {
         int summa = 0;
 
         for (int i = 0; i < factorial.length; i++) {
-            if (factorial[i] % 2 != 0) {
-                summa = summa + factorial(factorial[i]);
-            }
+            summa = summa + factorial(factorial[i]);
         }
         System.out.println(summa);
+
     }
 
     public static int factorial(int a) {
