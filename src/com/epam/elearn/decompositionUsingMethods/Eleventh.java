@@ -13,20 +13,22 @@ public class Eleventh {
         String a = scanner.nextLine();
         System.out.println("Укажите второе число");
         String b = scanner.nextLine();
-        equality(a, b);
+
+        System.out.println(equality(a, b));
     }
 
-    public static void equality(String a, String b) {
+    public static String equality(String a, String b) {
 
         int first = a.length();
         int second = b.length();
+        String answer = "";
 
         if (first > second) {
-            System.out.println("В первом числе больше цифр");
+            answer = "В первом числе больше цифр";
         } else if (first < second) {
-            System.out.println("Во втором числе больше цифр");
+            answer = "Во втором числе больше цифр";
         } else
-            System.out.println("Оба эти числа имею одинаковое число цифр");
-
+            answer = "Оба эти числа имею одинаковое число цифр";
+        return answer;
     }
 }
