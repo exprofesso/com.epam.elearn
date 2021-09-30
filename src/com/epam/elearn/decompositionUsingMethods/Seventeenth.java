@@ -26,8 +26,8 @@ public class Seventeenth {
         int count = 0;
         number = n;
         while (number > 0) {
-            sum();
-            difference();
+            sumOfDigits();
+            substract();
             System.out.println(subtraction);
             count++;
         }
@@ -36,7 +36,7 @@ public class Seventeenth {
     }
 
 
-    private static int sum() {
+    private static int sumOfDigits() {
         totalSum = 0;
         int newNumber = number;
         while (newNumber >= 1) {
@@ -47,7 +47,7 @@ public class Seventeenth {
         return totalSum;
     }
 
-    private static int difference() {
+    private static int substract() {
         subtraction = number - totalSum;
         number = subtraction;
         return subtraction;
