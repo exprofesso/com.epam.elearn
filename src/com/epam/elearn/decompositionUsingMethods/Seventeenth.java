@@ -11,10 +11,6 @@ import java.util.Scanner;
 
 public class Seventeenth {
 
-    private static int subtraction;
-    private static int totalSum;
-    private static int number;
-
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -22,19 +18,28 @@ public class Seventeenth {
         int n = scanner.nextInt();
         scanner.close();
 
+//        int count = 0;
+//        int number = n;
+//        while (number > 0) {
+//            sumOfDigits(number);
+//            substract();
+//            System.out.println(subtraction);
+//            count++;
+//        }
         int count = 0;
-        number = n;
+        int number = n;
+
         while (number > 0) {
-            sumOfDigits(number);
-            substract();
-            System.out.println(subtraction);
+            number = number - sumOfDigits(number);
+            System.out.println(number);
             count++;
         }
-
+        System.out.println("Всего произведено " + count + " действий");
 
     }
+
     private static int sumOfDigits(int number) {
-        totalSum = 0;
+        int totalSum = 0;
         int newNumber = number;
         while (newNumber >= 1) {
             int buf2 = newNumber - ((newNumber / 10) * 10);
@@ -44,10 +49,27 @@ public class Seventeenth {
         return totalSum;
     }
 
-    private static int substract() {
-        subtraction = number - totalSum;
-        number = subtraction;
-        return subtraction;
-    }
+//    private static int substract(int number, int totalSum) {
+//        int subtraction = number - totalSum;
+//        number = subtraction;
+//        return subtraction;
+//    }
+
+//    private static int sumOfDigits() {
+//        totalSum = 0;
+//        int newNumber = number;
+//        while (newNumber >= 1) {
+//            int buf2 = newNumber - ((newNumber / 10) * 10);
+//            totalSum = totalSum + buf2;
+//            newNumber = newNumber / 10;
+//        }
+//        return totalSum;
+//    }
+//
+//    private static int substract() {
+//        subtraction = number - totalSum;
+//        number = subtraction;
+//        return subtraction;
+//    }
 
 }

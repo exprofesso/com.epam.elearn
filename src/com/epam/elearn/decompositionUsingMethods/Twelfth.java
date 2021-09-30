@@ -21,7 +21,7 @@ public class Twelfth {
 
         int a[] = new int[n];
 
-        System.out.println(Arrays.toString(summ(a, n)));
+        System.out.println(Arrays.toString(summ(a, k)));
     }
 
     public static int[] mass(int a[]) { //заполнение массива
