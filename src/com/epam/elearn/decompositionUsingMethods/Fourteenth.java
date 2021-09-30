@@ -17,27 +17,21 @@ public class Fourteenth {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите K: ");
         int k = scanner.nextInt();
+
+        decomposition(k);
+    }
+
+
+    public static void decomposition(int k) {
         int mass[] = new int[k];
-
-        decomposition(mass);
-    }
-
-    //заполнение массива от 1 до k
-    public static int[] populate(int mas[]) {
-        for (int i = 0, j = 0; i < mas.length; i++, j++) {
-            mas[i] = j;
+        for (int i = 0, j = 0; i < mass.length; i++, j++) {
+            mass[i] = j;
         }
-        return mas;
-    }
-
-
-    public static void decomposition(int mas[]) {
-        mas = populate(mas);
 
         int mas2[] = new int[10];
         //разложение числа на цифры
-        for (int i = 0; i < mas.length; i++) {
-            int buf1 = mas[i];
+        for (int i = 0; i < mass.length; i++) {
+            int buf1 = mass[i];
             while (buf1 >= 1) {
                 int buf2 = buf1 - ((buf1 / 10) * 10);
                 buf1 = buf1 / 10;
@@ -46,12 +40,13 @@ public class Fourteenth {
                 n++;
             }
             //вызов метода сравнения числа массива и числа, вычисленного по алгоритму
-            if (sum(mas2, n) == mas[i]) {
-                System.out.println(mas[i]);
+            if (sum(mas2, n) == mass[i]) {
+                System.out.println(mass[i]);
             }
             n = 0;
         }
     }
+
 
     //реализация алгоритма согласно примера 153=1*1*1+5*5*5+3*3*3=1+125+27
     public static int sum(int mas2[], int n) {
