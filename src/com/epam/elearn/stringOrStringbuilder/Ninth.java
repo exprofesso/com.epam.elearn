@@ -18,8 +18,9 @@ public class Ninth {
         int count = 0;
 
         for (int i = 0; i < a.length(); i++) {
-            char letter = a.charAt(i);
-            if (letter > 96 && letter < 123) {
+//            char letter = a.charAt(i);
+//            if (letter > 96 && letter < 123) {
+            if (Character.isLowerCase(a.charAt(i))) {
                 count++;
             }
         }
@@ -32,8 +33,9 @@ public class Ninth {
         int count = 0;
 
         for (int i = 0; i < a.length(); i++) {
-            char letter = a.charAt(i);
-            if (letter > 65 && letter < 90) {
+//            char letter = a.charAt(i);
+//            if (letter > 65 && letter < 90) {
+            if (Character.isUpperCase(a.charAt(i))) {
                 count++;
             }
         }
