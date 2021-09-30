@@ -9,22 +9,22 @@ public class Sixteenth {
 
     public static void main(String[] args) {
 
-        int count = 0;
+        int sum = 0;
         int even = 0;
 
-        for(int i = 10; i <= 99; i++){
-            if(i % 2 != 0) {
-                count = count + i;
-             //   System.out.println(i)
+        for (int i = 10; i <= 99; i++) {
+            if (i % 2 != 0) {
+                sum = sum + i;
+                //   System.out.println(i)
             }
         }
-        System.out.println("Сумма нечетных чисел " + count);
+        System.out.println("Сумма нечетных чисел " + sum);
 
-        while (count > 2) {
-            count = count / 10;
-            if(count % 2 == 0) {
+        while (sum > 2) {
+            sum = sum / 10;
+            if (sum % 2 == 0) {
                 even++;
-                System.out.println(count);
+                System.out.println(sum);
                 System.out.println("_________");
             }
         }
