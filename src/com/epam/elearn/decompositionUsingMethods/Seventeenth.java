@@ -14,7 +14,7 @@ public class Seventeenth {
     private static int subtraction;
     private static int n;
     private static int totalSum;
-    private static int newN;
+    private static int number;
 
     public static void main(String[] args) {
 
@@ -24,8 +24,8 @@ public class Seventeenth {
         scanner.close();
 
         int count = 0;
-        newN = n;
-        while (newN > 0) {
+        number = n;
+        while (number > 0) {
             sum();
             difference();
             System.out.println(subtraction);
@@ -38,18 +38,18 @@ public class Seventeenth {
 
     private static int sum() {
         totalSum = 0;
-        int buf1 = newN;
-        while (buf1 >= 1) {
-            int buf2 = buf1 - ((buf1 / 10) * 10);
+        int newNumber = number;
+        while (newNumber >= 1) {
+            int buf2 = newNumber - ((newNumber / 10) * 10);
             totalSum = totalSum + buf2;
-            buf1 = buf1 / 10;
+            newNumber = newNumber / 10;
         }
         return totalSum;
     }
 
     private static int difference() {
-        subtraction = newN - totalSum;
-        newN = subtraction;
+        subtraction = number - totalSum;
+        number = subtraction;
         return subtraction;
     }
 
