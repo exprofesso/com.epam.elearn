@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class Seventeenth {
 
     private static int subtraction;
-    private static int n;
     private static int totalSum;
     private static int number;
 
@@ -20,13 +19,13 @@ public class Seventeenth {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Укажите число");
-        n = scanner.nextInt();
+        int n = scanner.nextInt();
         scanner.close();
 
         int count = 0;
         number = n;
         while (number > 0) {
-            sumOfDigits();
+            sumOfDigits(number);
             substract();
             System.out.println(subtraction);
             count++;
@@ -34,9 +33,7 @@ public class Seventeenth {
 
 
     }
-
-
-    private static int sumOfDigits() {
+    private static int sumOfDigits(int number) {
         totalSum = 0;
         int newNumber = number;
         while (newNumber >= 1) {
