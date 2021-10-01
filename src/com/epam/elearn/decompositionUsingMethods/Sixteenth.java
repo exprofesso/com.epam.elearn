@@ -5,11 +5,19 @@ package com.epam.elearn.decompositionUsingMethods;
 Определить также, сколько четных цифр в найденной сумме. Для решения задачи использовать декомпозицию.
  */
 
+import java.util.Scanner;
+
 public class Sixteenth {
 
     public static void main(String[] args) {
 
-        int sum = sumOddNumbers(10, 99);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Укажите первое число");
+        int a = scanner.nextInt();
+        System.out.println("Укажите второе число");
+        int b = scanner.nextInt();
+
+        int sum = sumOddNumbers(a, b);
         int even = numberEvenNumbers(sum);
 
         System.out.println("Сумма нечетных чисел " + sum);
