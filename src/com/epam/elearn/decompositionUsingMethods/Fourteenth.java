@@ -68,7 +68,7 @@ public class Fourteenth {
         int k = scanner.nextInt();
 
         int mass[] = new int[k];
-        for (int i = 0, j = 0; i < mass.length; i++, j++) {
+        for (int i = 0, j = 1; i < mass.length; i++, j++) {
             mass[i] = j;
         }
 
