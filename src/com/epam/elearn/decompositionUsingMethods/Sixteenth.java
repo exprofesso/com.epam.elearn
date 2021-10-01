@@ -9,27 +9,49 @@ public class Sixteenth {
 
     public static void main(String[] args) {
 
-        int sum = 0;
-        int even = 0;
+        int sum = sumOddNumbers(10, 99);
+        int even = numberEvenNumbers(sum);
 
-        for (int i = 10; i <= 99; i++) {
+        System.out.println("Сумма нечетных чисел " + sum);
+        System.out.println("Колличество четных чисел " + even);
+
+//        for (int i = 10; i <= 99; i++) {
+//            if (i % 2 != 0) {
+//                sum = sum + i;
+//                //   System.out.println(i)
+//            }
+//        }
+//        while (sum > 2) {
+//            sum = sum / 10;
+//            if (sum % 2 == 0) {
+//                even++;
+//                System.out.println(sum);
+//                System.out.println("_________");
+//            }
+//        }
+    }
+
+    public static int sumOddNumbers(int a, int b) {
+        int sum = 0;
+        for (int i = a; i <= b; i++) {
             if (i % 2 != 0) {
                 sum = sum + i;
                 //   System.out.println(i)
             }
         }
-        System.out.println("Сумма нечетных чисел " + sum);
+        return sum;
+    }
 
+    public static int numberEvenNumbers(int sum) {
+        int even = 0;
         while (sum > 2) {
             sum = sum / 10;
             if (sum % 2 == 0) {
                 even++;
-                System.out.println(sum);
-                System.out.println("_________");
+//                System.out.println(sum);
+//                System.out.println("_________");
             }
         }
-
-        System.out.println("Колличество четных чисел " + even);
+        return even;
     }
-
 }
