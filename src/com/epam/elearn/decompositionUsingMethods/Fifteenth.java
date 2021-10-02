@@ -9,6 +9,7 @@ public class Fifteenth {
     public static void main(String[] args) {
         for (int i = 2; i <= 9; i++) {
             findNumbers(i);
+            System.out.println("\b\b");
         }
     }
 
@@ -25,7 +26,6 @@ public class Fifteenth {
             System.out.print(", ");
             mas[0]++;
         }
-        System.out.println("\b\b");
     }
 
 }
