@@ -12,8 +12,8 @@ public class Fifth {
     public static void charIndex() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Укажите символ");
-        String simvol = scanner.nextLine();
-        int x = (char) simvol.charAt(0);
-        System.out.println(simvol + " char index " + x);
+        String character = scanner.nextLine();
+        int x = character.charAt(0);
+        System.out.println(character + " char index " + x);
     }
 }

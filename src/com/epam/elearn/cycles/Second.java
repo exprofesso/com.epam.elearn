@@ -28,16 +28,16 @@ public class Second {
     }
 
     public static long function(int a, int b, int h) {
-        long tmpMinus = 0;
-        long tmpPlus = 0;
+        long minimal = 0;
+        long maximum = 0;
 
         for (long i = a; i <= b; i += h) {
             if (i <= 2) {
-                tmpMinus -= i;
+                minimal -= i;
             } else {
-                tmpPlus += i;
+                maximum += i;
             }
         }
-        return tmpMinus + tmpPlus;
+        return minimal + maximum;
     }
 }

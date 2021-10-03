@@ -31,7 +31,7 @@ public class Eighth {
         int second = scanner.nextInt() - 1;
 
         // int column_first[] = new int[n];
-        Integer columnFirst;
+        int columnFirst;
         // создание временого массива и замена данных в столбцах
         for (int i = 0; i < array.length; i++) {
             columnFirst = array[i][firs];

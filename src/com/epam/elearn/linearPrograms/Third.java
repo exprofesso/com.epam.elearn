@@ -1,13 +1,23 @@
 package com.epam.elearn.linearPrograms;
 
 
+import java.util.Scanner;
+
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
 // 3. Вычислить значение выражения по формуле (все переменные принимают действительные значения):
 public class Third {
     public static void main(String[] args) {
-        System.out.println(trig(2, 1));
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Укажите значение для X");
+        long x = (long) scanner.nextInt();
+        System.out.println("Укажите значение для Y");
+        long y = (long) scanner.nextInt();
+
+
+        System.out.println(trig(x, y));
     }
 
     public static double trig(double x, double y) {

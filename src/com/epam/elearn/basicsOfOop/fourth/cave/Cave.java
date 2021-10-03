@@ -21,7 +21,7 @@ public class Cave {
 
     // заполение пещеры
     private void generationTreasure() {
-        Random random = new Random();
+      Random random = new Random();
         for (int i = 1; i <= 100; i++) {
 //            String name = "Опись сокровищь " + i;
             treasureList.add(new Treasure("name", TreasureType.values()[new Random().nextInt(TreasureType.values().length)], TreasureMaterial.values()[new Random().nextInt(TreasureMaterial.values().length)], random.nextInt(2000)));

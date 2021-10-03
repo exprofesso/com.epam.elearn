@@ -26,46 +26,46 @@ public class TourConstructor {
 
     // выборка по типу путевки
     ArrayList<TourPackage> selectByTourPackege(TourPackageType type) {
-        ArrayList<TourPackage> temp = new ArrayList<>();
+        ArrayList<TourPackage> typeArray = new ArrayList<>();
         for (TourPackage tour : tourPackages) {
             if (tour.getTourPackageType().equals(type)) {
-                temp.add(tour);
+                typeArray.add(tour);
             }
         }
-        return temp;
+        return typeArray;
     }
 
     // выборка по типу транспорта
     ArrayList<TourPackage> selectMoreTransport(Transport transport) {
-        ArrayList<TourPackage> temp = new ArrayList<>();
+        ArrayList<TourPackage> transportArray = new ArrayList<>();
         for (TourPackage tour : tourPackages) {
             if (tour.getTransport().equals(transport)) {
-                temp.add(tour);
+                transportArray.add(tour);
             }
         }
-        return temp;
+        return transportArray;
     }
 
     // выборка по колличеству дней
     ArrayList<TourPackage> selectMoreTransport(int date) {
-        ArrayList<TourPackage> temp = new ArrayList<>();
+        ArrayList<TourPackage> dateArray = new ArrayList<>();
         for (TourPackage tour : tourPackages) {
             if (tour.getNumberOfDay() == date) {
-                temp.add(tour);
+                dateArray.add(tour);
             }
         }
-        return temp;
+        return dateArray;
     }
 
     // выборка по типу транспорта, типу еды и колличеству дней
     ArrayList<TourPackage> selectMoreTransport(Transport transport, Food food, int days) {
-        ArrayList<TourPackage> temp = new ArrayList<>();
+        ArrayList<TourPackage> tourConditionsArray = new ArrayList<>();
         for (TourPackage tour : tourPackages) {
             if (tour.getTransport().equals(transport) && tour.getFood().equals(food) && tour.getNumberOfDay() == days) {
-                temp.add(tour);
+                tourConditionsArray.add(tour);
             }
         }
-        return temp;
+        return tourConditionsArray;
     }
 
     static void printListTourPackage(ArrayList<TourPackage> tourPackages) {

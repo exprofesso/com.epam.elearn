@@ -21,12 +21,12 @@ public class First {
         for (int i = 0; i < snake_case.length; i++) {
             StringBuilder stringBuilder = new StringBuilder();
             for (int j = 0; j < camelCase[i].length(); j++) {
-                char lettle = camelCase[i].toCharArray()[j];
-                if (Character.isLowerCase(lettle)) {
-                    stringBuilder.append(lettle);
+                char letter = camelCase[i].toCharArray()[j];
+                if (Character.isLowerCase(letter)) {
+                    stringBuilder.append(letter);
                 } else {
                     stringBuilder.append("_");
-                    stringBuilder.append(Character.toLowerCase(lettle));
+                    stringBuilder.append(Character.toLowerCase(letter));
                 }
             }
             snake_case[i] = stringBuilder.toString();

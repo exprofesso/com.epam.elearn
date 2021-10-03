@@ -10,8 +10,8 @@ public class Fourth {
 
 
     public static boolean brick(int A, int B, int x, int y, int z) {
-        if ((A >= x && B >= y) || (A >= x && B >= z) || (A >= z && B >= y) ||
-                (A >= y && B >= x) || (A >= z && B >= x) || (A >= y && B >= z)) {
+        if ((A > x && B > y) || (A > x && B > z) || (A > z && B > y) ||
+                (A > y && B > x) || (A > z && B > x) || (A > y && B > z)) {
             return true;
         }
         return false;

@@ -14,13 +14,13 @@ public class Fifth {
         System.out.println("Укажите размер массива");
         int z = scanner.nextInt();
         int[] array = new int[z];
-        System.out.println("Укажите больше какого числа должно быть");
+        System.out.println("Укажите меньше какого числа должно быть");
         int y = scanner.nextInt();
 
         enterArrayRandom(array);
         System.out.println("You array");
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > y) {
+            if (array[i] < y) {
                 System.out.print(array[i] + " ");
             }
         }
