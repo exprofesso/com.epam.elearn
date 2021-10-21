@@ -18,6 +18,18 @@ public class Fourth {
 
     private static SimpleDateFormat format = new SimpleDateFormat("HH:mm");
 
+
+    // вывод информации о конкретном поезде
+    public static String toSee(Train[] trains, String number) {
+        for (int i = 0; i < trains.length; i++) {
+            if (trains[i].number.equalsIgnoreCase(number)) {
+                return "Информация о поезде " + number + " станция прибытия " + trains[i].city + " время отправления " + trains[i].timeGo;
+            }
+        }
+        return null;
+    }
+
+
     public static void main(String[] args) throws ParseException {
 
 
@@ -41,7 +53,8 @@ public class Fourth {
 
         System.out.println("\n**********\n");
 
-        System.out.println(Train.toSee(trains, "32"));
+        System.out.println(Fourth.toSee(trains, "32"));
+
 
         System.out.println("**********");
 
@@ -153,15 +166,5 @@ class Train {
     @Override
     public String toString() {
         return "\nTrain { city = " + city + " " + "number = " + number + " timeGo = " + timeGo + "}";
-    }
-
-    // вывод информации о конкретном поезде
-    public static String toSee(Train[] trains, String number) {
-        for (int i = 0; i < trains.length; i++) {
-            if (trains[i].number.equalsIgnoreCase(number)) {
-                return "Информация о поезде " + number + " станция прибытия " + trains[i].city + " время отправления " + trains[i].timeGo;
-            }
-        }
-        return null;
     }
 }
