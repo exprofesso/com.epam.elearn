@@ -76,19 +76,19 @@ public class First {
     public static void sortParagraph(String a) {
 
         String[] sort = a.split("\n");
-        int[] numberParagraph = new int[sort.length];
+        int[] numberOfSentences = new int[sort.length];
         int count = 0;
 
         for (int i = 0; i < sort.length; i++) {
             String[] sentences = splitSentences(sort[i]);
-            numberParagraph[i] = sentences.length;
+            numberOfSentences[i] = sentences.length;
             if (count < sentences.length) {
                 count = sentences.length;
             }
         }
         for (int i = 1; i <= count; i++) {
-            for (int j = 0; j < numberParagraph.length; j++) {
-                if (i == numberParagraph[j]) {
+            for (int j = 0; j < numberOfSentences.length; j++) {
+                if (i == numberOfSentences[j]) {
                     System.out.println(sort[j] + "\t");
                 }
             }
