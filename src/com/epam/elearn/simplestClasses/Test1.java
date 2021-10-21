@@ -8,28 +8,7 @@ package com.epam.elearn.simplestClasses;
  */
 
 
-public class First {
-
-    public static void main(String[] args) {
-
-        Test1 test1 = new Test1();
-        Test1 test2 = new Test1();
-
-        test1.setAge(34);
-        test1.printAge();
-
-        test2.setAge(30);
-        test2.printAge();
-        System.out.println("++++++++++++");
-        System.out.println("Cуммой двух чисел будет " + Test1.sum(test1.getAge(), test2.getAge()));
-        System.out.println("++++++++++++");
-        System.out.println("Наибольшее значение будет " + Test1.most(test1.getAge(), test2.getAge()));
-
-
-    }
-}
-
-class Test1 {
+public class Test1 {
     private int age;
 
     public Test1() {
@@ -69,4 +48,20 @@ class Test1 {
         return most;
     }
 
+
+    public static void main(String[] args) {
+
+        Test1 test1 = new Test1();
+        Test1 test2 = new Test1();
+
+        test1.setAge(34);
+        test1.printAge();
+
+        test2.setAge(30);
+        test2.printAge();
+        System.out.println("++++++++++++");
+        System.out.println("Cуммой двух чисел будет " + Test1.sum(test1.getAge(), test2.getAge()));
+        System.out.println("++++++++++++");
+        System.out.println("Наибольшее значение будет " + Test1.most(test1.getAge(), test2.getAge()));
+    }
 }
