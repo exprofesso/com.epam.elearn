@@ -60,10 +60,6 @@ class CountTheRange {
         this.count = count;
     }
 
-    public int getCountRandom() {
-        return countRandom;
-    }
-
     public void setCountRandom(int countRandom) {
         this.countRandom = countRandom;
     }
