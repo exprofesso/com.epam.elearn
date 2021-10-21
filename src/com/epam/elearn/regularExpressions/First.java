@@ -135,9 +135,9 @@ public class First {
     // сортировка по лексемам
 
     public static void lexeme(String text, String letter) {
-        String[] sort = text.split("\n");
-        for (int i = 0; i < sort.length; i++) {
-            String sentences[] = splitSentences(sort[i]);
+        String[] paragraphs = text.split("\n");
+        for (int i = 0; i < paragraphs.length; i++) {
+            String sentences[] = splitSentences(paragraphs[i]);
             for (int j = 0; j < sentences.length; j++) {
                 String[] words = splitLength(sentences[j]);
 
