@@ -107,9 +107,9 @@ public class First {
 
         String[] sort = a.split("\n");
         for (int i = 0; i < sort.length; i++) {
-            String sentences[] = splitSentences(sort[i]);
-            for (int j = 0; j < sentences.length; j++) {
-                String[] words = splitLength(sentences[j]);
+            String paragraphs[] = splitSentences(sort[i]);
+            for (int j = 0; j < paragraphs.length; j++) {
+                String[] words = splitLength(paragraphs[j]);
 
                 // сортировка слов
                 for (int z = words.length - 1; z >= 0; z--) {
