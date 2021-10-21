@@ -80,10 +80,10 @@ public class First {
         int count = 0;
 
         for (int i = 0; i < sort.length; i++) {
-            String[] strings = splitSentences(sort[i]);
-            numberParagraph[i] = strings.length;
-            if (count < strings.length) {
-                count = strings.length;
+            String[] sentences = splitSentences(sort[i]);
+            numberParagraph[i] = sentences.length;
+            if (count < sentences.length) {
+                count = sentences.length;
             }
         }
         for (int i = 1; i <= count; i++) {
