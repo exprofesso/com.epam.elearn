@@ -80,7 +80,7 @@ public class Client {
     public String getInfoAccount() {
         String info = "";
         for (int i = 0; i < accounts.size(); i++) {
-            info += String.format("Данные по аккаунтам" + accounts.get(i).getId(), accounts.get(i).getBalance(), accounts.get(i).getStatus());
+            info += String.format(" Данные по аккаунтам " + accounts.get(i).getId(), accounts.get(i).getBalance(), accounts.get(i).getStatus());
         }
         return String.format(info);
     }
@@ -111,10 +111,9 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
-                "firstName='" + firstName + '\'' +
-                ", second='" + second + '\'' +
-                ", passID='" + passID + '\'' +
-                '}';
+        return "Client " +
+                "Name = " + firstName +
+                " " + second +
+                ", passID = " + passID + ".";
     }
 }
