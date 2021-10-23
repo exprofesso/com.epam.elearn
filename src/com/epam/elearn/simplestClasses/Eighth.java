@@ -17,6 +17,41 @@ b) список покупателей, у которых номер креди�
 
 public class Eighth {
 
+
+    // создание сортировки по фамилиям
+    public static void sortName(Customer[] customers) {
+        Customer temp = new Customer();
+        for (int i = 0; i < customers.length; i++) {
+            for (int j = customers.length - 1; j > i; j--) {
+                int sort = customers[i].getSurname().compareToIgnoreCase(customers[j].getSurname());
+                if (sort > 0) {
+                    temp = customers[i];
+                    customers[i] = customers[j];
+                    customers[j] = temp;
+                } else if (sort == 0) {
+                    if (customers[i].getSurname().compareToIgnoreCase(customers[j].getSurname()) > 0) {
+                        temp = customers[i];
+                        customers[i] = customers[j];
+                        customers[j] = temp;
+                    }
+                }
+            }
+        }
+    }
+
+    // создание сортировки в заданом диапозоне
+    public static void sortNumber(Customer[] customer, int from, int to) {
+        if (from < to) {
+            for (int i = 0; i < customer.length; i++) {
+                if (customer[i].getNumberCars() > from && customer[i].getNumberCars() < to) {
+                    System.out.println(customer[i].toString());
+                }
+            }
+        } else {
+            System.out.println("укажите верные данные ");
+        }
+    }
+
     public static void main(String[] args) {
 
         Customer[] customers = new Customer[10];
@@ -32,14 +67,13 @@ public class Eighth {
         customers[8] = new Customer(9, "Gogol", "Nilola", "", "Minsk, Pobedy 1-79", 235656745, 154);
         customers[9] = new Customer(10, "Tolstoi", "Lev", "", "Minsk, Tanka 1-345", 764635435, 71);
 
-
         System.out.println("**********");
         // в заданом диапозоне
-        Customer.sortNumber(customers, 400000000, 600000000);
+        Eighth.sortNumber(customers, 400000000, 600000000);
 
         System.out.println("*********");
         // портировка по фамилии
-        Customer.sortName(customers);
+        Eighth.sortName(customers);
         for (int i = 0; i < customers.length; i++) {
             System.out.println(customers[i].toString());
         }
@@ -55,6 +89,9 @@ class Customer {
     private String address;
     private int numberCard;
     private int numberAccount;
+
+    public Customer() {
+    }
 
     public Customer(int id, String surname, String name, int numberAccount) {
         this.id = id;
@@ -141,39 +178,39 @@ class Customer {
                 ", numberAccount " + numberAccount;
     }
 
-    // создание сортировки по фамилиям
-
-    public static void sortName(Customer[] customers) {
-        Customer temp;
-        for (int i = 0; i < customers.length; i++) {
-            for (int j = customers.length - 1; j > i; j--) {
-                int sort = customers[i].surname.compareToIgnoreCase(customers[j].surname);
-                if (sort > 0) {
-                    temp = customers[i];
-                    customers[i] = customers[j];
-                    customers[j] = temp;
-                } else if (sort == 0) {
-                    if (customers[i].surname.compareToIgnoreCase(customers[j].surname) > 0) {
-                        temp = customers[i];
-                        customers[i] = customers[j];
-                        customers[j] = temp;
-                    }
-                }
-            }
-        }
-    }
-
-    // создание сортировки в заданом диапозоне
-
-    public static void sortNumber(Customer[] customer, int from, int to) {
-        if (from < to) {
-            for (int i = 0; i < customer.length; i++) {
-                if (customer[i].numberCard > from && customer[i].numberCard < to) {
-                    System.out.println(customer[i].toString());
-                }
-            }
-        } else {
-            System.out.println("укажите верные данные ");
-        }
-    }
+//    // создание сортировки по фамилиям
+//
+//    public static void sortName(Customer[] customers) {
+//        Customer temp;
+//        for (int i = 0; i < customers.length; i++) {
+//            for (int j = customers.length - 1; j > i; j--) {
+//                int sort = customers[i].surname.compareToIgnoreCase(customers[j].surname);
+//                if (sort > 0) {
+//                    temp = customers[i];
+//                    customers[i] = customers[j];
+//                    customers[j] = temp;
+//                } else if (sort == 0) {
+//                    if (customers[i].surname.compareToIgnoreCase(customers[j].surname) > 0) {
+//                        temp = customers[i];
+//                        customers[i] = customers[j];
+//                        customers[j] = temp;
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+//    // создание сортировки в заданом диапозоне
+//
+//    public static void sortNumber(Customer[] customer, int from, int to) {
+//        if (from < to) {
+//            for (int i = 0; i < customer.length; i++) {
+//                if (customer[i].numberCard > from && customer[i].numberCard < to) {
+//                    System.out.println(customer[i].toString());
+//                }
+//            }
+//        } else {
+//            System.out.println("укажите верные данные ");
+//        }
+//    }
 }
