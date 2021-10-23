@@ -17,12 +17,12 @@ public class Fifth {
         Counter counter1 = new Counter(87, 100, 15);
         Counter counter2 = new Counter();
 
-        for (int i = 0; i < counter.getCountMax(); i++) {
+        for (int i = 0; i < counter.getMax(); i++) {
             System.out.println(counter);
             counter.increase();
         }
 
-        for (int i = counter1.getCount(); i >= counter1.getCountMin(); i--) {
+        for (int i = counter1.getValue(); i >= counter1.getMin(); i--) {
             System.out.println(counter1);
             counter1.reduction();
         }
@@ -38,58 +38,58 @@ public class Fifth {
 }
 
 class Counter {
-    private int count;
-    private int countRandom;
-    private int countMax;
-    private int countMin;
+    private int value;
+    private int valueRandom;
+    private int max;
+    private int min;
 
     public Counter() {
     }
 
-    public Counter(int count, int countMax, int countMin) {
-        this.count = count;
-        this.countMax = countMax;
-        this.countMin = countMin;
+    public Counter(int value, int max, int min) {
+        this.value = value;
+        this.max = max;
+        this.min = min;
     }
 
-    public int getCount() {
-        return count;
+    public int getValue() {
+        return value;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setValue(int value) {
+        this.value = value;
     }
 
-    public void setCountRandom(int countRandom) {
-        this.countRandom = countRandom;
+    public void setValueRandom(int countRandom) {
+        this.valueRandom = valueRandom;
     }
 
-    public int getCountMax() {
-        return countMax;
+    public int getMax() {
+        return max;
     }
 
-    public void setCountMax(int countMax) {
-        this.countMax = countMax;
+    public void setMax(int max) {
+        this.max = max;
     }
 
-    public int getCountMin() {
-        return countMin;
+    public int getMin() {
+        return min;
     }
 
-    public void setCountMin(int countMin) {
-        this.countMin = countMin;
+    public void setMin(int countMin) {
+        this.min = min;
     }
 
     @Override
     public String toString() {
-        return "Счетчик = " + count;
+        return "Счетчик = " + value;
     }
 
     // увелечение величины счетчика
     void increase() {
-        if(count < countMax){
-            count++;
-        } else if (count == countMax) {
+        if(value < max){
+            value++;
+        } else if (value == max) {
             System.out.println("Вот мы и пришли к верхнему приделу");
         }
 //        else if (count > countMax) {
@@ -100,9 +100,9 @@ class Counter {
 
     // уменьшение величины счетчика
     void reduction() {
-        if(count > countMin){
-            count--;
-        } else if (count == countMin) {
+        if(value > min){
+            value--;
+        } else if (value == min) {
             System.out.println("Вот вы и пришли к нижнему пределю");
         }
 //        else if (count < countMin) {
@@ -116,7 +116,7 @@ class Counter {
     }
 
     public static String statusRandom(Counter counter) {
-        return "Count{count=" + counter.countRandom + "}";
+        return "Count{count=" + counter.valueRandom + "}";
     }
 
 
@@ -132,20 +132,20 @@ class Counter {
             tempMax = random.nextInt(100);
             tempMin = random.nextInt(100);
         }
-        setCountRandom(tempRandom);
-        setCountMax(tempMax);
-        setCountMin(tempMin);
+        setValueRandom(tempRandom);
+        setMax(tempMax);
+        setMin(tempMin);
         System.out.println("min " + tempMin);
         System.out.println("ran " + tempRandom);
         System.out.println("max " + tempMax);
 
         System.out.println("*******");
         System.out.println("Пошли вверх");
-        for (int i = countRandom; i <= countMax + 1; i++) {
-            countRandom++;
-            if (countRandom == countMax) {
+        for (int i = valueRandom; i <= max + 1; i++) {
+            valueRandom++;
+            if (valueRandom == max) {
                 System.out.println("Вот мы и пришли к верхнему приделу");
-                System.out.println(countRandom);
+                System.out.println(valueRandom);
             }
 //            else if (countRandom > countMax) {
 //                System.out.println("Вы вышли за предел");
@@ -156,11 +156,11 @@ class Counter {
 //            }
         }
         System.out.println("А теперь пошли вниз");
-        for (int i = countMax; i >= countMin - 1; i--) {
-            countRandom--;
-            if (countRandom == countMin) {
+        for (int i = max; i >= min - 1; i--) {
+            valueRandom--;
+            if (valueRandom == min) {
                 System.out.println("Вот мы и пришли к нижнему приделу");
-                System.out.println(countRandom);
+                System.out.println(valueRandom);
 //                countRandom--;
 //            } else if (countRandom < countMin) {
 //                System.out.println("Вы вышли за предел");
