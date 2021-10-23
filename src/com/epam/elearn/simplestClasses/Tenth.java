@@ -21,6 +21,53 @@ import java.util.Date;
 
 public class Tenth {
 
+    //    a) список рейсов для заданного пункта назначения;
+    public static void sortByDestination(Airline[] airlines, String destination) {
+        int count = 0;
+        for (int i = 0; i < airlines.length; i++) {
+            if (airlines[i].getDestination().equalsIgnoreCase(destination)) {
+                System.out.println(airlines[i].toString());
+                count++;
+            }
+        }
+        if (count == 0) {
+            System.out.println("Не летят туда сегодня самолеты и не едут поезда!");
+        }
+    }
+
+
+    // b) список рейсов для заданного дня недели;
+
+    public static void sortByWeekDay(Airline[] airlines, String weekDay) {
+        String dW = weekDay.trim().toLowerCase();
+        for (int i = 0; i < airlines.length; i++) {
+            if (airlines[i].getWeekDay().equalsIgnoreCase(weekDay)) {
+                System.out.println(airlines[i].toString());
+            }
+        }
+    }
+
+    // c) список рейсов для заданного дня недели, время вылета для которых больше заданного.
+    public static void sortByWeekDayDeparture(Airline[] airlines, String weekDay, Date departure) {
+
+        Airline[] temp = new Airline[airlines.length];
+        int count = 0;
+        String wD = weekDay.trim().toLowerCase();
+        for (int i = 0; i < airlines.length; i++) {
+            if (airlines[i].getWeekDay().equalsIgnoreCase(weekDay)) {
+                temp[count] = airlines[i];
+                count++;
+            }
+        }
+        for (int j = 0; j < count; j++) {
+            int sort = temp[j].getDeparture().compareTo(departure);
+            if (sort > 0) {
+                System.out.println(temp[j].toString());
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
         Airline[] airlines = new Airline[10];
         airlines[0] = new Airline("Moscow", 10, "big", new Date(1516161616141L), "Monday");
@@ -36,15 +83,15 @@ public class Tenth {
 
 
         // a) список рейсов для заданного пункта назначения;
-        Airline.toDestination(airlines, "riga");
+        Tenth.sortByDestination(airlines, "riga");
         System.out.println("*************");
 
         // b) список рейсов для заданного дня недели;
-        Airline.dayWeek(airlines, "monday");
+        Tenth.sortByWeekDay(airlines, "monday");
         System.out.println("**************");
 
         // c) список рейсов для заданного дня недели, время вылета для которых больше заданного.
-        Airline.dayWeekDeparture(airlines, "friday", new Date(1212151616141L));
+        Tenth.sortByWeekDayDeparture(airlines, "friday", new Date(1212151616141L));
 
     }
 }
@@ -55,14 +102,14 @@ class Airline {
     private int number;
     private String type;
     private Date departure;
-    private String dayWeek;
+    private String weekDay;
 
-    public Airline(String destination, int number, String type, Date departure, String dayWeek) {
+    public Airline(String destination, int number, String type, Date departure, String weekDay) {
         this.destination = destination;
         this.number = number;
         this.type = type;
         this.departure = departure;
-        this.dayWeek = dayWeek;
+        this.weekDay = weekDay;
     }
 
     public String getDestination() {
@@ -97,12 +144,12 @@ class Airline {
         this.departure = departure;
     }
 
-    public String getDayWeek() {
-        return dayWeek;
+    public String getWeekDay() {
+        return weekDay;
     }
 
-    public void setDayWeek(String dayWeek) {
-        this.dayWeek = dayWeek;
+    public void setWeekDay(String weekDay) {
+        this.weekDay = weekDay;
     }
 
     @Override
@@ -112,55 +159,55 @@ class Airline {
                 ", number = " + number +
                 ", type = " + type +
                 ", departure = " + departure +
-                ", dayWeek = " + dayWeek;
+                ", weekDay = " + weekDay;
     }
 
 
-    //    a) список рейсов для заданного пункта назначения;
-    public static void toDestination(Airline[] airlines, String destination) {
-        int count = 0;
-        for (int i = 0; i < airlines.length; i++) {
-            if (airlines[i].destination.equalsIgnoreCase(destination)) {
-                System.out.println(airlines[i].toString());
-                count++;
-            }
-        }
-        if (count == 0) {
-            System.out.println("Не летят туда сегодня самолеты и не едут поезда!");
-        }
-    }
-
-
-    // b) список рейсов для заданного дня недели;
-
-    public static void dayWeek(Airline[] airlines, String dayWeek) {
-        String dW = dayWeek.trim().toLowerCase();
-        for (int i = 0; i < airlines.length; i++) {
-            if (airlines[i].dayWeek.equalsIgnoreCase(dayWeek)) {
-                System.out.println(airlines[i].toString());
-            }
-        }
-    }
-
-    // c) список рейсов для заданного дня недели, время вылета для которых больше заданного.
-    public static void dayWeekDeparture(Airline[] airlines, String dayWeek, Date departure) {
-
-        Airline[] temp = new Airline[airlines.length];
-        int count = 0;
-        String dW = dayWeek.trim().toLowerCase();
-        for (int i = 0; i < airlines.length; i++) {
-            if (airlines[i].dayWeek.equalsIgnoreCase(dayWeek)) {
-                temp[count] = airlines[i];
-                count++;
-            }
-        }
-        for (int j = 0; j < count; j++) {
-            int sort = temp[j].departure.compareTo(departure);
-            if (sort > 0) {
-                System.out.println(temp[j].toString());
-            }
-        }
-
-    }
+//    //    a) список рейсов для заданного пункта назначения;
+//    public static void toDestination(Airline[] airlines, String destination) {
+//        int count = 0;
+//        for (int i = 0; i < airlines.length; i++) {
+//            if (airlines[i].destination.equalsIgnoreCase(destination)) {
+//                System.out.println(airlines[i].toString());
+//                count++;
+//            }
+//        }
+//        if (count == 0) {
+//            System.out.println("Не летят туда сегодня самолеты и не едут поезда!");
+//        }
+//    }
+//
+//
+//    // b) список рейсов для заданного дня недели;
+//
+//    public static void dayWeek(Airline[] airlines, String dayWeek) {
+//        String dW = dayWeek.trim().toLowerCase();
+//        for (int i = 0; i < airlines.length; i++) {
+//            if (airlines[i].dayWeek.equalsIgnoreCase(dayWeek)) {
+//                System.out.println(airlines[i].toString());
+//            }
+//        }
+//    }
+//
+//    // c) список рейсов для заданного дня недели, время вылета для которых больше заданного.
+//    public static void dayWeekDeparture(Airline[] airlines, String dayWeek, Date departure) {
+//
+//        Airline[] temp = new Airline[airlines.length];
+//        int count = 0;
+//        String dW = dayWeek.trim().toLowerCase();
+//        for (int i = 0; i < airlines.length; i++) {
+//            if (airlines[i].dayWeek.equalsIgnoreCase(dayWeek)) {
+//                temp[count] = airlines[i];
+//                count++;
+//            }
+//        }
+//        for (int j = 0; j < count; j++) {
+//            int sort = temp[j].departure.compareTo(departure);
+//            if (sort > 0) {
+//                System.out.println(temp[j].toString());
+//            }
+//        }
+//
+//    }
 
 }
