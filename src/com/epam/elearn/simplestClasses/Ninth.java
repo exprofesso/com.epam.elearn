@@ -18,37 +18,82 @@ c) список книг, выпущенных после заданного г�
  */
 
 public class Ninth {
+
+    // a) список книг заданного автора;
+
+    public static void findAuthor(Book[] books, String author) {
+        int count = 0;
+        for (int i = 0; i < books.length; i++) {
+            if (books[i].getAuthor().equalsIgnoreCase(author)) {
+                System.out.println(books[i]);
+                count++;
+            }
+        }
+        if (count == 0) {
+            System.out.println("Увы данного автора нет ");
+        }
+    }
+
+    // b) список книг, выпущенных заданным издательством;
+
+    public static void findPublisher(Book[] books, String publisher) {
+        int count = 0;
+        for (int i = 0; i < books.length; i++) {
+            if (books[i].getPublisher().equalsIgnoreCase(publisher)) {
+                System.out.println(books[i].toString());
+                count++;
+            }
+        }
+        if (count == 0) {
+            System.out.println("Данного издания не существует ");
+        }
+    }
+
+    // c) список книг, выпущенных после заданного года.
+
+    public static void moreAge(Book[] books, int age) {
+        int count = 0;
+        for (int i = 0; i < books.length; i++) {
+            if (books[i].getAge() > age) {
+                System.out.println(books[i].toString());
+                count++;
+            }
+        }
+        if (count == 0) {
+            System.out.println("Книг выданных после этого года нет");
+        }
+    }
     public static void main(String[] args) {
 
-        Book[] books = new Book[10];
+        Book[] library = new Book[10];
 
-        books[0] = new Book(1, "Gogol", "Star", 2020, 310, 57, "hard");
-        books[1] = new Book(2, "Gomer", "Knowledge", 2009, 31, 57, "soft");
-        books[2] = new Book(3, "Gogol", "Knowledge", 2012, 240, 57, "soft");
-        books[3] = new Book(4, "Gagarin", "Knowledge", 2012, 50, 57, "soft");
-        books[4] = new Book(5, "Gordon", "Knowledge", 1999, 130, 57, "soft");
-        books[5] = new Book(6, "Gordon", "Science", 1990, 3, 57, "hard");
-        books[6] = new Book(7, "Gagarin", "Science", 2002, 33, 57, "soft");
-        books[7] = new Book(8, "Gomer", "Science", 2010, 687, 57, "soft");
-        books[8] = new Book(9, "Gomer", "Star", 1981, 358, 57, "hard");
-        books[9] = new Book(10, "Gomer", "Star", 1994, 222, 57, "hard");
+        library[0] = new Book(1, "Gogol", "Star", 2020, 310, 57, "hard");
+        library[1] = new Book(2, "Gomer", "Knowledge", 2009, 31, 57, "soft");
+        library[2] = new Book(3, "Gogol", "Knowledge", 2012, 240, 57, "soft");
+        library[3] = new Book(4, "Gagarin", "Knowledge", 2012, 50, 57, "soft");
+        library[4] = new Book(5, "Gordon", "Knowledge", 1999, 130, 57, "soft");
+        library[5] = new Book(6, "Gordon", "Science", 1990, 3, 57, "hard");
+        library[6] = new Book(7, "Gagarin", "Science", 2002, 33, 57, "soft");
+        library[7] = new Book(8, "Gomer", "Science", 2010, 687, 57, "soft");
+        library[8] = new Book(9, "Gomer", "Star", 1981, 358, 57, "hard");
+        library[9] = new Book(10, "Gomer", "Star", 1994, 222, 57, "hard");
 
         // a) список книг заданного автора;
-        Book.findAuthor(books, "gomer");
+        Ninth.findAuthor(library, "gomer");
         System.out.println("************");
-        Book.findAuthor(books, "Tolstoi");
+        Ninth.findAuthor(library, "Tolstoi");
         System.out.println("************");
 
         // b) список книг, выпущенных заданным издательством;
-        Book.findPublisher(books, "Star");
+        Ninth.findPublisher(library, "Star");
         System.out.println("*************");
-        Book.findPublisher(books, "hope");
+        Ninth.findPublisher(library, "hope");
         System.out.println("**************");
 
         // c) список книг, выпущенных после заданного года.
-        Book.moreAge(books, 2000);
+        Ninth.moreAge(library, 2000);
         System.out.println("**************");
-        Book.moreAge(books, 2021);
+        Ninth.moreAge(library, 2021);
 
 
     }
@@ -145,48 +190,48 @@ class Book {
     }
 
 
-    // a) список книг заданного автора;
-
-    public static void findAuthor(Book[] books, String author) {
-        int count = 0;
-        for (int i = 0; i < books.length; i++) {
-            if (books[i].author.equalsIgnoreCase(author)) {
-                System.out.println(books[i]);
-                count++;
-            }
-        }
-        if (count == 0) {
-            System.out.println("Увы данного автора нет ");
-        }
-    }
-
-    // b) список книг, выпущенных заданным издательством;
-
-    public static void findPublisher(Book[] books, String publisher) {
-        int count = 0;
-        for (int i = 0; i < books.length; i++) {
-            if (books[i].publisher.equalsIgnoreCase(publisher)) {
-                System.out.println(books[i].toString());
-                count++;
-            }
-        }
-        if (count == 0) {
-            System.out.println("Данного издания не существует ");
-        }
-    }
-
-    // c) список книг, выпущенных после заданного года.
-
-    public static void moreAge(Book[] books, int age) {
-        int count = 0;
-        for (int i = 0; i < books.length; i++) {
-            if (books[i].age > age) {
-                System.out.println(books[i].toString());
-                count++;
-            }
-        }
-        if (count == 0) {
-            System.out.println("Книг выданных после этого года нет");
-        }
-    }
+//    // a) список книг заданного автора;
+//
+//    public static void findAuthor(Book[] books, String author) {
+//        int count = 0;
+//        for (int i = 0; i < books.length; i++) {
+//            if (books[i].author.equalsIgnoreCase(author)) {
+//                System.out.println(books[i]);
+//                count++;
+//            }
+//        }
+//        if (count == 0) {
+//            System.out.println("Увы данного автора нет ");
+//        }
+//    }
+//
+//    // b) список книг, выпущенных заданным издательством;
+//
+//    public static void findPublisher(Book[] books, String publisher) {
+//        int count = 0;
+//        for (int i = 0; i < books.length; i++) {
+//            if (books[i].publisher.equalsIgnoreCase(publisher)) {
+//                System.out.println(books[i].toString());
+//                count++;
+//            }
+//        }
+//        if (count == 0) {
+//            System.out.println("Данного издания не существует ");
+//        }
+//    }
+//
+//    // c) список книг, выпущенных после заданного года.
+//
+//    public static void moreAge(Book[] books, int age) {
+//        int count = 0;
+//        for (int i = 0; i < books.length; i++) {
+//            if (books[i].age > age) {
+//                System.out.println(books[i].toString());
+//                count++;
+//            }
+//        }
+//        if (count == 0) {
+//            System.out.println("Книг выданных после этого года нет");
+//        }
+//    }
 }
