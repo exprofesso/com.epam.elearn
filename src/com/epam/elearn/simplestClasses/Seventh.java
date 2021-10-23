@@ -53,13 +53,13 @@ class Triangle {
 
     // нахождение периметра
     public double perimeter() {
-        return a.sumSide() + b.sumSide() + c.sumSide();
+        return a.getLength() + b.getLength() + c.getLength();
     }
 
     // нахождение площади треугольника
     public double areaTriangel() {
         double area = perimeter() / 2;
-        return Math.sqrt(area * (area - a.sumSide()) * (area - c.sumSide()) * (area - c.sumSide()));
+        return Math.sqrt(area * (area - a.getLength()) * (area - c.getLength()) * (area - c.getLength()));
     }
 
     // расчет точки пересечения медиан
@@ -88,7 +88,7 @@ class Side {
         return b;
     }
 
-    double sumSide() {
+    double getLength() {
         return Math.sqrt(Math.pow((a.getX() - b.getY()), 2) + Math.pow((a.getX() - b.getY()), 2));
     }
 
