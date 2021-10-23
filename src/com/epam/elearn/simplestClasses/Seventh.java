@@ -21,7 +21,7 @@ public class Seventh {
         System.out.println(perimeter);
 
         // площадь
-        double area = triangle.areaTriangel();
+        double area = triangle.calculateArea();
         System.out.println(area);
 
         // точка пересечения медиан
@@ -57,7 +57,7 @@ class Triangle {
     }
 
     // нахождение площади треугольника
-    public double areaTriangel() {
+    public double calculateArea() {
         double area = perimeter() / 2;
         return Math.sqrt(area * (area - a.getLength()) * (area - c.getLength()) * (area - c.getLength()));
     }
