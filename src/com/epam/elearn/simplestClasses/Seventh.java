@@ -17,7 +17,7 @@ public class Seventh {
         Triangle triangle = Triangle.createTriangle(a, b, c);
 
         // периметр
-        double perimeter = triangle.perimeter();
+        double perimeter = triangle.definePerimeter();
         System.out.println(perimeter);
 
         // площадь
@@ -25,7 +25,7 @@ public class Seventh {
         System.out.println(area);
 
         // точка пересечения медиан
-        Point median = triangle.pointMedianIntersection();
+        Point median = triangle.calculatingMediaTЕriangle();
         System.out.printf("median(%.3f, %.3f)", median.getX(), median.getY());
 
 
@@ -52,18 +52,18 @@ class Triangle {
     }
 
     // нахождение периметра
-    public double perimeter() {
+    public double definePerimeter() {
         return a.getLength() + b.getLength() + c.getLength();
     }
 
     // нахождение площади треугольника
     public double calculateArea() {
-        double area = perimeter() / 2;
+        double area = definePerimeter() / 2;
         return Math.sqrt(area * (area - a.getLength()) * (area - c.getLength()) * (area - c.getLength()));
     }
 
     // расчет точки пересечения медиан
-    public Point pointMedianIntersection() {
+    public Point calculatingMediaTЕriangle() {
         double x = (a.getA().getX() + a.getB().getX() + b.getB().getX()) / 3;
         double y = (a.getA().getY() + a.getB().getY() + b.getB().getY()) / 3;
         return new Point(x, y);
