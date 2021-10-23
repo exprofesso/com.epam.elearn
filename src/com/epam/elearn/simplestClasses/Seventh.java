@@ -25,7 +25,7 @@ public class Seventh {
         System.out.println(area);
 
         // точка пересечения медиан
-        Point median = triangle.calculatingMediaTЕriangle();
+        Point median = triangle.calculateMedianIntersection();
         System.out.printf("median(%.3f, %.3f)", median.getX(), median.getY());
 
 
@@ -63,7 +63,7 @@ class Triangle {
     }
 
     // расчет точки пересечения медиан
-    public Point calculatingMediaTЕriangle() {
+    public Point calculateMedianIntersection() {
         double x = (a.getA().getX() + a.getB().getX() + b.getB().getX()) / 3;
         double y = (a.getA().getY() + a.getB().getY() + b.getB().getY()) / 3;
         return new Point(x, y);
